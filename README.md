@@ -1,20 +1,26 @@
-acmdownload
+ACM Keyword Collector
 ===========
 
-Python script to automatically download metadata about research papers, starting with some paper and transitively downloading the most relevant papers, from ACM digital library.
+Python script to automatically collect keywords from research papers, from ACM digital library. This tool is built on top of [acmdownload](https://github.com/niklasekstrom/acmdownload)
 
 ## WARNING:
-Do not try to modify the script to download many documents in parallel; at some point the dl.acm.org site will notice this and temporarily block your IP.
+This tool issues many post request to ACM Digital Library; at some point the dl.acm.org site will notice this and temporarily block your IP.
+
+# Package dependence:
+* BibtexParser
+* pandas
 
 # Installing and running:
 
 * Download and install the latest release of [Python 3](https://www.python.org/downloads/).
-* Install the [requests](https://pypi.org/project/requests/) library: run the command pip3 install requests.
+* Install all dependent packages.
 
-Run using the command line python acmdownload.py.
+Run using the command line: 
+```python3 bibparser.py -p [list of conferences] -y [list of years]```
 
-# Finding the UID of a paper
 
-Search for a paper on [dl.acm.org](dl.acm.org) and go to its page. For example the page for the paper "Spanner: Google's globally-distributed database" from OSDI'12 has the url [https://dl.acm.org/doi/10.5555/2387880.2387905](https://dl.acm.org/doi/10.5555/2387880.2387905). The DOI is the string 10.5555/2387880.2387905.
+# Searching keyword of a paper
 
-Change the doi global variable in the script to the DOI for your paper. The documents_to_download global variable is the total number of documents to include in the set before ranking them according to number of references from within the set.
+
+The query engine will read doi(s) from the bib file given in ```conference/{CONFERENCE}/{CONFERENCE}{YEAR}.bib``` file and query its full bibtex from [dl.acm.org](dl.acm.org).
+Then it count the number of papers that have the target word(s) in either keyword or abstract section, and print it in pandas string format.
