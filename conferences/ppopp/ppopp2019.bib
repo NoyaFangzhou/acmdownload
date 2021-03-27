@@ -1,1317 +1,536 @@
-@inproceedings{DBLP:conf/ppopp/0001B19,
-  author    = {Yihan Sun and
-               Guy E. Blelloch},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Implementing parallel and concurrent tree structures},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {447--450},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3302576},
-  doi       = {10.1145/3293883.3302576},
-  timestamp = {Fri, 08 Feb 2019 09:53:15 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/0001B19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295710,
+author = {Hestness, Joel and Ardalani, Newsha and Diamos, Gregory},
+title = {Beyond Human-Level Accuracy: Computational Challenges in Deep Learning},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295710},
+doi = {10.1145/3293883.3295710},
+abstract = {Deep learning (DL) research yields accuracy and product improvements from both model architecture changes and scale: larger data sets and models, and more computation. For hardware design, it is difficult to predict DL model changes. However, recent prior work shows that as dataset sizes grow, DL model accuracy and model size grow predictably. This paper leverages the prior work to project the dataset and model size growth required to advance DL accuracy beyond human-level, to frontier targets defined by machine learning experts. Datasets will need to grow 33--971\texttimes{}, while models will need to grow 6.6--456\texttimes{} to achieve target accuracies.We further characterize and project the computational requirements to train these applications at scale. Our characterization reveals an important segmentation of DL training challenges for recurrent neural networks (RNNs) that contrasts with prior studies of deep convolutional networks. RNNs will have comparatively moderate operational intensities and very large memory footprint requirements. In contrast to emerging accelerator designs, large-scale RNN training characteristics suggest designs with significantly larger memory capacity and on-chip caches.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {1–14},
+numpages = {14},
+keywords = {deep learning, data parallelism, neural networks, compute requirements, model parallelism, compute graph},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/AcarACR19,
-  author    = {Umut A. Acar and
-               Vitaly Aksenov and
-               Arthur Chargu{\'{e}}raud and
-               Mike Rainey},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Provably and practically efficient granularity control},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {214--228},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295725},
-  doi       = {10.1145/3293883.3295725},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/AcarACR19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295722,
+author = {Xiao, Junmin and Wang, Shijie and Wan, Weiqiang and Hong, Xuehai and Tan, Guangming},
+title = {S-EnKF: Co-Designing for Scalable Ensemble Kalman Filter},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295722},
+doi = {10.1145/3293883.3295722},
+abstract = {Ensemble Kalman filter (EnKF) is one of the most important methods for data assimilation, which is widely applied to the reconstruction of observed historical data for providing initial conditions of numerical atmospheric and oceanic models. With the improvement of data resolution and the increase in the amount of model data, the scalability of recent parallel implementations suffers from high overhead on data transfer. In this paper, we propose, S-EnKF: a scalable and distributed EnKF adaptation for modern clusters. With an in-depth analysis of new requirements brought forward by recent frameworks and limitations of current designs, we present a co-design of S-EnKF. For fully exploiting the resources available in modern parallel file systems, we design a concurrent access approach to accelerate the process of reading large amounts of background data. Through a deeper investigation of the data dependence relations, we modify EnKF's workflow to maximize the overlap of file reading and local analysis with a new multi-stage computation approach. Furthermore, we push the envelope of performance further with aggressive co-design of auto-tuning through tradeoff between the benefit on runtime and the cost on processors based on classic cost models. The experimental evaluation of S-EnKF demonstrates nearly ideal strong scalability on up to 12,000 processors. The largest run sustains a performance of 3x-speedup compared with P-EnKF, which represents the state-of-art parallel implementation of EnKF.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {15–26},
+numpages = {12},
+keywords = {data assimilation, domain localization, scalability, ensemble Kalman filter, parallel implementation},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/AnceaumePLPP19,
-  author    = {Emmanuelle Anceaume and
-               Antonella Del Pozzo and
-               Romaric Ludinard and
-               Maria Potop{-}Butucaru and
-               Sara {Tucci Piergiovanni}},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Blockchain abstract data type: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {439--440},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3303705},
-  doi       = {10.1145/3293883.3303705},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/AnceaumePLPP19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295727,
+author = {Gelado, Isaac and Garland, Michael},
+title = {Throughput-Oriented GPU Memory Allocation},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295727},
+doi = {10.1145/3293883.3295727},
+abstract = {Throughput-oriented architectures, such as GPUs, can sustain three orders of magnitude more concurrent threads than multicore architectures. This level of concurrency pushes typical synchronization primitives (e.g., mutexes) over their scalability limits, creating significant performance bottlenecks in modules, such as memory allocators, that use them. In this paper, we develop concurrent programming techniques and synchronization primitives, in support of a dynamic memory allocator, that are efficient for use with very high levels of concurrency.We formulate resource allocation as a two-stage process, that decouples accounting for the number of available resources from the tracking of the available resources themselves. To facilitate the accounting stage, we introduce a novel bulk semaphore abstraction that extends traditional semaphore semantics by optimizing for the case where threads operate on the semaphore simultaneously. We also similarly design new collective synchronization primitives that enable groups of cooperating threads to enter critical sections together. Finally, we show that delegation of deferred reclamation to threads already blocked greatly improves efficiency.Using all these techniques, our throughput-oriented memory allocator delivers both high allocation rates and low memory fragmentation on modern GPUs. Our experiments demonstrate that it achieves allocation rates that are on average 16.56 times higher than the counterpart implementation in the CUDA 9 toolkit.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {27–37},
+numpages = {11},
+keywords = {GPU programming, memory allocation, concurrency},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/AwadAJFO19,
-  author    = {Muhammad A. Awad and
-               Saman Ashkiani and
-               Rob Johnson and
-               Martin Farach{-}Colton and
-               John D. Owens},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Engineering a high-performance {GPU} B-Tree},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {145--157},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295706},
-  doi       = {10.1145/3293883.3295706},
-  timestamp = {Sat, 19 Oct 2019 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/AwadAJFO19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295733,
+author = {Wang, Hao and Geng, Liang and Lee, Rubao and Hou, Kaixi and Zhang, Yanfeng and Zhang, Xiaodong},
+title = {SEP-Graph: Finding Shortest Execution Paths for Graph Processing under a Hybrid Framework on GPU},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295733},
+doi = {10.1145/3293883.3295733},
+abstract = {In general, the performance of parallel graph processing is determined by three pairs of critical parameters, namely synchronous or asynchronous execution mode (Sync or Async), Push or Pull communication mechanism (Push or Pull), and Data-driven or Topology-driven traversing scheme (DD or TD), which increases the complexity and sophistication of programming and system implementation of GPU. Existing graph-processing frameworks mainly use a single combination in the entire execution for a given application, but we have observed their variable and suboptimal performance. In this paper, we present SEP-Graph, a highly efficient software framework for graph-processing on GPU. The hybrid execution mode is automatically switched among three pairs of parameters, with an objective to achieve the shortest execution time in each iteration. We also apply a set of optimizations to SEP-Graph, considering the characteristics of graph algorithms and underlying GPU architectures. We show the effectiveness of SEP-Graph based on our intensive and comparative performance evaluation on NVIDIA 1080, P100, and V100 GPUs. Compared with existing and representative GPU graph-processing framework Groute and Gunrock, SEP-Graph can reduce execution time up to 45.8 times and 39.4 times.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {38–52},
+numpages = {15},
+keywords = {hybrid, graph algorithms, GPU},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/BattigG19,
-  author    = {Martin B{\"{a}}ttig and
-               Thomas R. Gross},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Encapsulated open nesting for {STM:} fine-grained higher-level conflict
-               detection},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {315--326},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295723},
-  doi       = {10.1145/3293883.3295723},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/BattigG19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295707,
+author = {Henriksen, Troels and Thor\o{}e, Frederik and Elsman, Martin and Oancea, Cosmin},
+title = {Incremental Flattening for Nested Data Parallelism},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295707},
+doi = {10.1145/3293883.3295707},
+abstract = {Compilation techniques for nested-parallel applications that can adapt to hardware and dataset characteristics are vital for unlocking the power of modern hardware. This paper proposes such a technique, which builds on flattening and is applied in the context of a functional data-parallel language. Our solution uses the degree of utilized parallelism as the driver for generating a multitude of code versions, which together cover all possible mappings of the application's regular nested parallelism to the levels of parallelism supported by the hardware. These code versions are then combined into one program by guarding them with predicates, whose threshold values are automatically tuned to hardware and dataset characteristics. Our unsupervised method---of statically clustering datasets to code versions---is different from autotuning work that typically searches for the combination of code transformations producing a single version, best suited for a specific dataset or on average for all datasets.We demonstrate---by fully integrating our technique in the repertoire of a compiler for the Futhark programming language---significant performance gains on two GPUs for three real-world applications, from the financial domain, and for six Rodinia benchmarks.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {53–67},
+numpages = {15},
+keywords = {GPGPU, parallel, compilers, functional language},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/BeckingsaleHSV19,
-  author    = {David Beckingsale and
-               Richard D. Hornung and
-               Tom Scogland and
-               Arturo Vargas},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Performance portable {C++} programming with {RAJA}},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {455--456},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3302577},
-  doi       = {10.1145/3293883.3302577},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/BeckingsaleHSV19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295701,
+author = {Winter, Martin and Mlakar, Daniel and Zayer, Rhaleb and Seidel, Hans-Peter and Steinberger, Markus},
+title = {Adaptive Sparse Matrix-Matrix Multiplication on the GPU},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295701},
+doi = {10.1145/3293883.3295701},
+abstract = {In the ongoing efforts targeting the vectorization of linear algebra primitives, sparse matrix-matrix multiplication (SpGEMM) has received considerably less attention than sparse Matrix-Vector multiplication (SpMV). While both are equally important, this disparity can be attributed mainly to the additional formidable challenges raised by SpGEMM.In this paper, we present a dynamic approach for addressing SpGEMM on the GPU. Our approach works directly on the standard compressed sparse rows (CSR) data format. In comparison to previous SpGEMM implementations, our approach guarantees a homogeneous, load-balanced access pattern to the first input matrix and improves memory access to the second input matrix. It adaptively re-purposes GPU threads during execution and maximizes the time efficient on-chip scratchpad memory can be used. Adhering to a completely deterministic scheduling pattern guarantees bit-stable results during repetitive execution, a property missing from other approaches. Evaluation on an extensive sparse matrix benchmark suggests our approach being the fastest SpGEMM implementation for highly sparse matrices (80% of the set). When bit-stable results are sought, our approach is the fastest across the entire test set.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {68–81},
+numpages = {14},
+keywords = {GPU, bit-stable, SpGEMM, sparse matrix, adaptive, ESC},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/Ben-DavidBFW19,
-  author    = {Naama Ben{-}David and
-               Guy E. Blelloch and
-               Michal Friedman and
-               Yuanhao Wei},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Making concurrent algorithms detectable: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {419--420},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3299991},
-  doi       = {10.1145/3293883.3299991},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/Ben-DavidBFW19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295708,
+author = {Dongol, Brijesh and Jagadeesan, Radha and Riely, James},
+title = {Modular Transactions: Bounding Mixed Races in Space and Time},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295708},
+doi = {10.1145/3293883.3295708},
+abstract = {We define local transactional race freedom (LTRF), which provides a programmer model for software transactional memory. LTRF programs satisfy the SC-LTRF property, thus allowing the programmer to focus on sequential executions in which transactions execute atomically. Unlike previous results, SC-LTRF does not require global race freedom. We also provide a lower-level implementation model to reason about quiescence fences and validate numerous compiler optimizations.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {82–93},
+numpages = {12},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/CarlsonW19,
-  author    = {Travis Carlson and
-               Eric Van Wyk},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Building parallel programming language constructs in the AbleC extensible
-               {C} compiler framework: a PPoPP tutorial},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {443--446},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3302574},
-  doi       = {10.1145/3293883.3302574},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/CarlsonW19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295711,
+author = {Yates, Ryan and Scott, Michael L.},
+title = {Leveraging Hardware TM in Haskell},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295711},
+doi = {10.1145/3293883.3295711},
+abstract = {Transactional memory (TM) is heavily used for synchronization in the Haskell programming language, but its performance has historically been poor. We set out to improve this performance using hardware TM (HTM) on Intel processors. This task is complicated by Haskell's retry mechanism, which requires information to escape aborted transactions, and by the heavy use of indirection in the Haskell runtime, which means that even small transactions are likely to over-flow hardware buffers. It is eased by functional semantics, which preclude irreversible operations; by the static separation of transactional state, which precludes privatization; and by the error containment of strong typing, which enables so-called lazy subscription to the lock that protects the "fallback" code path.We describe a three-level hybrid TM system for the Glasgow Haskell Compiler (GHC). Our system first attempts to perform an entire transaction in hardware. Failing that, it falls back to software tracking of read and write sets combined with a commit-time hardware transaction. If necessary, it employs a global lock to serialize commits (but still not the bodies of transactions). To get good performance from hardware TM while preserving Haskell semantics, we use Bloom filters for read and write set tracking. We also implemented and extended the newly proposed mutable constructor fields language feature to significantly reduce indirection. Experimental results with complex data structures show significant improvements in throughput and scalability.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {94–106},
+numpages = {13},
+keywords = {transactional memory, Haskell, synchronization, scalability},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/CastilloJCM0BVB19,
-  author    = {Emilio Castillo and
-               Nikhil Jain and
-               Marc Casas and
-               Miquel Moret{\'{o}} and
-               Martin Schulz and
-               Ram{\'{o}}n Beivide and
-               Mateo Valero and
-               Abhinav Bhatele},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Optimizing computation-communication overlap in asynchronous task-based
-               programs: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {415--416},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295720},
-  doi       = {10.1145/3293883.3295720},
-  timestamp = {Sat, 19 Oct 2019 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/CastilloJCM0BVB19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295714,
+author = {Filipe, Ricardo and Issa, Shady and Romano, Paolo and Barreto, Jo\~{a}o},
+title = {Stretching the Capacity of Hardware Transactional Memory in IBM POWER Architectures},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295714},
+doi = {10.1145/3293883.3295714},
+abstract = {The hardware transactional memory (HTM) implementations in commercially available processors are significantly hindered by their tight capacity constraints. In practice, this renders current HTMs unsuitable to many real-world workloads of in-memory databases.This paper proposes SI-HTM, which stretches the capacity bounds of the underlying HTM, thus opening HTM to a much broader class of applications. SI-HTM leverages the HTM implementation of the IBM POWER architecture with a software layer to offer a single-version implementation of Snapshot Isolation. When compared to HTM- and software-based concurrency control alternatives, SI-HTM exhibits improved scalability, achieving speedups of up to 300% relatively to HTM on in-memory database benchmarks.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {107–119},
+numpages = {13},
+keywords = {IMDBS, IBM POWER, snapshot isolation, transactional memory, HTM},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/ChenDZWQG19,
-  author    = {Yubin Chen and
-               Zhuocheng Ding and
-               Jin Zhang and
-               Yun Wang and
-               Zhengwei Qi and
-               Haibing Guan},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {A distributed hypervisor for resource aggregation: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {407--408},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295715},
-  doi       = {10.1145/3293883.3295715},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ChenDZWQG19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295730,
+author = {Saad, Mohamed M. and Kishi, Masoomeh Javidi and Jing, Shihao and Hans, Sandeep and Palmieri, Roberto},
+title = {Processing Transactions in a Predefined Order},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295730},
+doi = {10.1145/3293883.3295730},
+abstract = {In this paper we provide a high performance solution to the problem of committing transactions while enforcing a pre-defined order. We provide the design and implementation of three algorithms, which deploy a specialized cooperative transaction execution model. This model permits the propagation of written values along the chain of ordered transactions. We show that, even in the presence of data conflicts, the proposed algorithms outperform single threaded execution, and other baseline and specialized state-of-the-art competitors (e.g., STMLite). The maximum speedup achieved in micro benchmarks, STAMP, PARSEC and SPEC200 applications is in the range of 4.3x -- 16.5x.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {120–132},
+numpages = {13},
+keywords = {transactions, ordering, parallelization},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/DohertyDWD19,
-  author    = {Simon Doherty and
-               Brijesh Dongol and
-               Heike Wehrheim and
-               John Derrick},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Verifying {C11} programs operationally},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {355--365},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295702},
-  doi       = {10.1145/3293883.3295702},
-  timestamp = {Fri, 27 Mar 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/DohertyDWD19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295704,
+author = {Yan, Zhaofeng and Lin, Yuzhe and Peng, Lu and Zhang, Weihua},
+title = {Harmonia: A High Throughput B+tree for GPUs},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295704},
+doi = {10.1145/3293883.3295704},
+abstract = {B+tree is one of the most important data structures and has been widely used in different fields. With the increase of concurrent queries and data-scale in storage, designing an efficient B+tree structure has become critical. Due to abundant computation resources, GPUs provide potential opportunities to achieve high query throughput for B+tree. However, prior methods cannot achieve satisfactory performance results due to low resource utilization and poor memory performance.In this paper, we first identify the gaps between B+tree and GPUs. Concurrent B+tree queries involve many global memory accesses and different divergences, which mismatch with GPU features. Based on this observation, we propose Harmonia, a novel B+tree structure to bridge the gap. In Harmonia, a B+tree structure is divided into a key region and a child region. The key region stores the nodes with its keys in a breadth-first order. The child region is organized as a prefix-sum array, which only stores each node's first child index in the key region. Since the prefix-sum child region is small and the children's index can be retrieved through index computations, most of it can be stored in on-chip caches, which can achieve good cache locality. To make it more efficient, Harmonia also includes two optimizations: partially-sorted aggregation and narrowed thread-group traversal, which can mitigate memory and warp divergence and improve resource utilization. Evaluations on a TITAN V GPU show that Harmonia can achieve up to 3.6 billion queries per second, which is about 3.4X faster than that of HB+Tree [39], a recent state-of-the-art GPU solution.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {133–144},
+numpages = {12},
+keywords = {high-throughput, GPU, B+tree},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/DongLLLZW019,
-  author    = {Xiao Dong and
-               Lei Liu and
-               Guangli Li and
-               Jiansong Li and
-               Peng Zhao and
-               Xueying Wang and
-               Xiaobing Feng},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Exploiting the input sparsity to accelerate deep neural networks:
-               poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {401--402},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295713},
-  doi       = {10.1145/3293883.3295713},
-  timestamp = {Tue, 29 Dec 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/DongLLLZW019.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295706,
+author = {Awad, Muhammad A. and Ashkiani, Saman and Johnson, Rob and Farach-Colton, Mart\'{\i}n and Owens, John D.},
+title = {Engineering a High-Performance GPU B-Tree},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295706},
+doi = {10.1145/3293883.3295706},
+abstract = {We engineer a GPU implementation of a B-Tree that supports concurrent queries (point, range, and successor) and updates (insertions and deletions). Our B-tree outperforms the state of the art, a GPU log-structured merge tree (LSM) and a GPU sorted array. In particular, point and range queries are significantly faster than in a GPU LSM (the GPU LSM does not implement successor queries). Furthermore, B-Tree insertions are also faster than LSM and sorted array insertions unless insertions come in batches of more than roughly 100k. Because we cache the upper levels of the tree, we achieve lookup throughput that exceeds the DRAM bandwidth of the GPU. We demonstrate that the key limiter of performance on a GPU is contention and describe the design choices that allow us to achieve this high performance.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {145–157},
+numpages = {13},
+keywords = {B-tree, data structures, GPU, mutable, dynamic},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/DongolJR19,
-  author    = {Brijesh Dongol and
-               Radha Jagadeesan and
-               James Riely},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Modular transactions: bounding mixed races in space and time},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {82--93},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295708},
-  doi       = {10.1145/3293883.3295708},
-  timestamp = {Fri, 27 Mar 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/DongolJR19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295705,
+author = {Hu, Xiaokang and Wei, Changzheng and Li, Jian and Will, Brian and Yu, Ping and Gong, Lu and Guan, Haibing},
+title = {QTLS: High-Performance TLS Asynchronous Offload Framework with Intel® QuickAssist Technology},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295705},
+doi = {10.1145/3293883.3295705},
+abstract = {Hardware accelerators are a promising solution to optimize the Total Cost of Ownership (TCO) of cloud datacenters. This paper targets the costly Transport Layer Security (TLS) and investigates the TLS acceleration for the widely-deployed event-driven TLS servers or terminators. Our study reveals an important fact: the straight offloading of TLS-involved crypto operations suffers from the frequent long-lasting blockings in the offload I/O, leading to the underutilization of both CPU and accelerator resources.To achieve efficient TLS acceleration for the event-driven web architecture, we propose QTLS, a high-performance TLS asynchronous offload framework based on Intel® QuickAssist Technology (QAT). QTLS re-engineers the TLS software stack and divides the TLS offloading into four phases to eliminate blockings. Then, multiple crypto operations from different TLS connections can be offloaded concurrently in one process/thread, bringing a performance boost. Moreover, QTLS is built with a heuristic polling scheme to retrieve accelerator responses efficiently and timely, and a kernel-bypass notification scheme to avoid expensive switches between user mode and kernel mode while delivering async events. The comprehensive evaluation shows that QTLS can provide up to 9x connections per second (CPS) with TLS-RSA (2048bit), 2x secure data transfer throughput and 85% reduction of average response time compared to the software baseline.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {158–172},
+numpages = {15},
+keywords = {asynchronous offload, crypto operations, crypto accelerator, event-driven web architecture, SSL/TLS},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/ElafrouGK19,
-  author    = {Athena Elafrou and
-               Georgios I. Goumas and
-               Nectarios Koziris},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {{BASMAT:} bottleneck-aware sparse matrix-vector multiplication auto-tuning
-               on GPGPUs},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {423--424},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3301490},
-  doi       = {10.1145/3293883.3301490},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ElafrouGK19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295737,
+author = {Gruber, Fabian and Selva, Manuel and Sampaio, Diogo and Guillon, Christophe and Moynault, Antoine and Pouchet, Louis-No\"{e}l and Rastello, Fabrice},
+title = {Data-Flow/Dependence Profiling for Structured Transformations},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295737},
+doi = {10.1145/3293883.3295737},
+abstract = {Profiling feedback is an important technique used by developers for performance debugging, where it is usually used to pinpoint performance bottlenecks and also to find optimization opportunities. Assessing the validity and potential benefit of a program transformation requires accurate knowledge of the data flow and dependencies, which can be uncovered by profiling a particular execution of the program.In this work we develop poly-prof, an end-to-end infrastructure for dynamic binary analysis, which produces feedback about the potential to apply complex program rescheduling. Our tool can handle both inter- and intraprocedural aspects of the program in a unified way, thus providing interprocedural transformation feedback.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {173–185},
+numpages = {13},
+keywords = {compiler optimization, polyhedral model, performance feedback, binary, dynamic dependence graph, loop transformations, instrumentation},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/ElizarovGP19,
-  author    = {Avner Elizarov and
-               Guy Golan{-}Gueta and
-               Erez Petrank},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {{LOFT:} lock-free transactional data structures},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {425--426},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3301491},
-  doi       = {10.1145/3293883.3301491},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ElizarovGP19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295728,
+author = {Wang, Qingsen and Su, Pengfei and Chabbi, Milind and Liu, Xu},
+title = {Lightweight Hardware Transactional Memory Profiling},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295728},
+doi = {10.1145/3293883.3295728},
+abstract = {Programs that use hardware transactional memory (HTM) demand sophisticated performance analysis tools when they suffer from performance losses. We have developed TxSampler---a lightweight profiler for programs that use HTM. TxSampler measures performance via sampling and provides a structured performance analysis to guide intuitive optimization with a novel decision-tree model. TxSampler computes metrics that drive the investigation process in a systematic way. It not only pinpoints hot transactions with time quantification of transactional and fallback paths, but also identifies causes of transaction aborts such as data contention, capacity overflow, false sharing, and problematic instructions. TxSampler associates metrics with full call paths that are even deeply embedded inside transactions and maps them to the program's source code. Our evaluation of more than 30 HTM benchmarks and applications shows that TxSampler incurs ~4% runtime overhead and negligible memory overhead for its insightful analyses. Guided by TxSampler, we are able to optimize several HTM programs and obtain nontrivial speedups.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {186–200},
+numpages = {15},
+keywords = {HTM benchmark suite, hardware transactional memory, optimization, profiling},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/FilipeI0019,
-  author    = {Ricardo Filipe and
-               Shady Issa and
-               Paolo Romano and
-               Jo{\~{a}}o Barreto},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Stretching the capacity of hardware transactional memory in {IBM}
-               {POWER} architectures},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {107--119},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295714},
-  doi       = {10.1145/3293883.3295714},
-  timestamp = {Tue, 29 Dec 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/FilipeI0019.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295716,
+author = {Meng, Ke and Li, Jiajia and Tan, Guangming and Sun, Ninghui},
+title = {A Pattern Based Algorithmic Autotuner for Graph Processing on GPUs},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295716},
+doi = {10.1145/3293883.3295716},
+abstract = {This paper proposes Gswitch, a pattern-based algorithmic auto-tuning system that dynamically switches between optimization variants with negligible overhead. Its novelty lies in a small set of algorithmic patterns that allow for the configurable assembly of variants of the algorithm. The fast transition of Gswitch is based on a machine learning model trained using 644 real graphs. Moreover, Gswitch provides a simple programming interface that conceals low-level tuning details from the user. We evaluate Gswitch on typical graph algorithms (BFS, CC, PR, SSSP, and BC) using Nvidia Kepler and Pascal GPUs. The results show that Gswitch runs up to 10\texttimes{} faster than the best configuration of the state-of-the-art programmable GPU-based graph processing libraries on 10 representative graphs. Gswitch outperforms Gunrock on 92.4% cases of 644 graphs which is the largest dataset evaluation reported to date.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {201–213},
+numpages = {13},
+keywords = {graph processing, GPU, auto-tuning},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/GeladoG19,
-  author    = {Isaac Gelado and
-               Michael Garland},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Throughput-oriented {GPU} memory allocation},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {27--37},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295727},
-  doi       = {10.1145/3293883.3295727},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/GeladoG19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295725,
+author = {Acar, Umut A. and Aksenov, Vitaly and Chargu\'{e}raud, Arthur and Rainey, Mike},
+title = {Provably and Practically Efficient Granularity Control},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295725},
+doi = {10.1145/3293883.3295725},
+abstract = {Over the past decade, many programming languages and systems for parallel-computing have been developed, e.g., Fork/Join and Habanero Java, Parallel Haskell, Parallel ML, and X10. Although these systems raise the level of abstraction for writing parallel codes, performance continues to require labor-intensive optimizations for coarsening the granularity of parallel executions. In this paper, we present provably and practically efficient techniques for controlling granularity within the run-time system of the language. Our starting point is "oracle-guided scheduling", a result from the functional-programming community that shows that granularity can be controlled by an "oracle" that can predict the execution time of parallel codes. We give an algorithm for implementing such an oracle and prove that it has the desired theoretical properties under the nested-parallel programming model. We implement the oracle in C++ by extending Cilk and evaluate its practical performance. The results show that our techniques can essentially eliminate hand tuning while closely matching the performance of hand tuned codes.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {214–228},
+numpages = {15},
+keywords = {parallel programming languages, granularity control},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/GruberSSGMPR19,
-  author    = {Fabian Gruber and
-               Manuel Selva and
-               Diogo Sampaio and
-               Christophe Guillon and
-               Antoine Moynault and
-               Louis{-}No{\"{e}}l Pouchet and
-               Fabrice Rastello},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Data-flow/dependence profiling for structured transformations},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {173--185},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295737},
-  doi       = {10.1145/3293883.3295737},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/GruberSSGMPR19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295734,
+author = {Li, Xiuhong and Liang, Yun and Yan, Shengen and Jia, Liancheng and Li, Yinghan},
+title = {A Coordinated Tiling and Batching Framework for Efficient GEMM on GPUs},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295734},
+doi = {10.1145/3293883.3295734},
+abstract = {General matrix multiplication (GEMM) plays a paramount role in a broad range of domains such as deep learning, scientific computing, and image processing. The primary optimization method is to partition the matrix into many tiles and exploit the parallelism within and between tiles. The tiling hierarchy closely mirrors the thread hierarchy on GPUs. In practice, GPUs can fully unleash its computing power only when the matrix size is large and there are sufficient number of tiles and workload for each tile. However, in many real-world applications especially deep learning domain, the matrix size is small. To this end, prior work proposes batched GEMM to process a group of small independent GEMMs together by designing a single CUDA kernel for all of these GEMMs.However, the current support for batched GEMM is still rudimentary. Tiling and batching are tightly correlated. A large tile size can increase the data reuse, but it will decrease the thread-level parallelism, which further decrease the optimization space for the batching. A small tile size can increase the thread-level parallelism and then provide larger optimization space for the batching, but at the cost of sacrificing data reuse. In this paper, we propose a coordinated tiling and batching framework for accelerating GEMMs on GPUs. It is a two-phase framework, which consists of a tiling engine and a batching engine to perform efficient batched GEMM on GPUs. Tiling engine partitions the GEMMs into independent tiles and batching engine assigns the tiles to thread blocks. Moreover, we propose a general programming interface for the coordinated tiling and batching solution. Finally, experiment evaluation results on synthetic batched GEMM cases show that our framework can achieve about 1.40X performance speedup on average over the state-of-the-art technique. We also use GoogleNet as a real-world case study and our framework can achieve 1.23X speedup.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {229–241},
+numpages = {13},
+keywords = {batching, GEMM, GPGPU, tiling},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/GuoLWLHHL19,
-  author    = {Jinrong Guo and
-               Wantao Liu and
-               Wang Wang and
-               Qu Lu and
-               Songlin Hu and
-               Jizhong Han and
-               Ruixuan Li},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {A {GPU} memory efficient speed-up scheme for training ultra-deep neural
-               networks: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {397--398},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295718},
-  doi       = {10.1145/3293883.3295718},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/GuoLWLHHL19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295731,
+author = {Zhao, Qi and Qiu, Zhengyi and Jin, Guoliang},
+title = {Semantics-Aware Scheduling Policies for Synchronization Determinism},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295731},
+doi = {10.1145/3293883.3295731},
+abstract = {A common task for all deterministic multithreading (DMT) systems is to enforce synchronization determinism. However, synchronization determinism has not been the focus of existing DMT research. Instead, most DMT systems focused on how to order data races remained after synchronization determinism is enforced. Consequently, existing scheduling policies for synchronization determinism all have limitations. They may either require performance annotations to achieve good performance or fail to provide schedule stability.In this paper, we argue that synchronization determinism is more fundamental to DMT systems than existing research suggests and propose efficient and effective scheduling policies. Our key insight is that synchronization operations actually encode programmers' intention on how inter-thread communication should be done and can be used as hints while scheduling synchronization operations. Based on this insight, we have built QiThread, a synchronization-determinism system with semantics-aware scheduling policies. Results of a diverse set of 108 programs show that QiThread is able to achieve comparable low overhead as state-of-the-art synchronization-determinism systems without the limitations associated with them.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {242–256},
+numpages = {15},
+keywords = {deterministic multithreading, semantics-aware policies, stable multithreading, synchronization determinism, synchronization scheduling},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/HenriksenTEO19,
-  author    = {Troels Henriksen and
-               Frederik Thor{\o}e and
-               Martin Elsman and
-               Cosmin E. Oancea},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Incremental flattening for nested data parallelism},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {53--67},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295707},
-  doi       = {10.1145/3293883.3295707},
-  timestamp = {Fri, 27 Dec 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/HenriksenTEO19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295735,
+author = {Singer, Kyle and Xu, Yifan and Lee, I-Ting Angelina},
+title = {Proactive Work Stealing for Futures},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295735},
+doi = {10.1145/3293883.3295735},
+abstract = {The use of futures provides a flexible way to express parallelism and can generate arbitrary dependences among parallel subcomputations. The additional flexibility that futures provide comes with a cost, however. When scheduled using classic work stealing, a program with futures, compared to a program that uses only fork-join parallelism, can incur a much higher number of "deviations," a metric for evaluating the performance of parallel executions. All prior works assume a parsimonious work-stealing scheduler, however, where a worker thread (surrogate of a processor) steals work only when its local deque becomes empty.In this work, we investigate an alternative scheduling approach, called ProWS, where the workers perform proactive work stealing when handling future operations. We show that ProWS, for programs that use futures, can provide provably efficient execution time and equal or better bounds on the number of deviations compared to classic parsimonious work stealing. Given a computation with T1 work and T∞ span, ProWS executes the computation on P processors in expected time O(T1/P + T∞ lg P), with an additional lg P overhead on the span term compared to the parsimonious variant. For structured use of futures, where each future is single touch with no race on the future handle, the algorithm incurs deviations, matching that of the parsimonious variant. For general use of futures, the algorithm incurs O(mkT∞ + PT∞ lg P) deviations, where mk is the maximum number of future touches that are logically parallel. Compared to the bound for the parsimonious variant, O(kT∞ + PT∞), with k being the total number of touches in the entire computation, this bound is better assuming mk = Ω(P lg P) and is smaller than k, which holds true for all the benchmarks we examined.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {257–271},
+numpages = {15},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/HestnessAD19,
-  author    = {Joel Hestness and
-               Newsha Ardalani and
-               Gregory F. Diamos},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Beyond human-level accuracy: computational challenges in deep learning},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {1--14},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295710},
-  doi       = {10.1145/3293883.3295710},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/HestnessAD19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295729,
+author = {Hoang, Loc and Pontecorvi, Matteo and Dathathri, Roshan and Gill, Gurbinder and You, Bozhi and Pingali, Keshav and Ramachandran, Vijaya},
+title = {A Round-Efficient Distributed Betweenness Centrality Algorithm},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295729},
+doi = {10.1145/3293883.3295729},
+abstract = {We present Min-Rounds BC (MRBC), a distributed-memory algorithm in the CONGEST model that computes the betweenness centrality (BC) of every vertex in a directed unweighted n-node graph in O(n) rounds. Min-Rounds BC also computes all-pairs-shortest-paths (APSP) in such graphs. It improves the number of rounds by at least a constant factor over previous results for unweighted directed APSP and for unweighted BC, both directed and undirected.We implemented MRBC in D-Galois, a state-of-the-art distributed graph analytics system, incorporated additional optimizations enabled by the D-Galois model, and evaluated its performance on a production cluster with up to 256 hosts using power-law and road networks. Compared to the BC algorithm of Brandes, on average, MRBC reduces the number of rounds by 14.0\texttimes{} and the communication time by 2.8\texttimes{} for the graphs in our test suite. As a result, MRBC is 2.1\texttimes{} faster on average than Brandes BC for real-world web-crawls on 256 hosts.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {272–286},
+numpages = {15},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/HoangPDGYPR19,
-  author    = {Loc Hoang and
-               Matteo Pontecorvi and
-               Roshan Dathathri and
-               Gurbinder Gill and
-               Bozhi You and
-               Keshav Pingali and
-               Vijaya Ramachandran},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {A round-efficient distributed betweenness centrality algorithm},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {272--286},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295729},
-  doi       = {10.1145/3293883.3295729},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/HoangPDGYPR19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295721,
+author = {K\"{u}ttler, Martin and Planeta, Maksym and Bierbaum, Jan and Weinhold, Carsten and H\"{a}rtig, Hermann and Barak, Amnon and Hoefler, Torsten},
+title = {Corrected Trees for Reliable Group Communication},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295721},
+doi = {10.1145/3293883.3295721},
+abstract = {Driven by ever increasing performance demands of compute-intensive applications, supercomputing systems comprise more and more nodes. This growth is a significant burden for fast group communication primitives and also makes those systems more susceptible to failures of individual nodes. In this paper we present a two-phase fault-tolerant scheme for group communication. Using broadcast as an example, we provide a full-spectrum discussion of our approach --- from a formal analysis to LogP-based simulations to a message-passing-based implementation running on a large cluster. Ultimately, we are able to reduce the complex problem of reliable and fault-tolerant collective group communication to a graph theoretical renumbering problem. Both, simulations and measurements, show our solution to achieve a latency reduction of 50% with up to six times fewer messages sent in comparison to existing schemes.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {287–299},
+numpages = {13},
+keywords = {low-latency broadcast, MPI, HPC, gossip, LogP model},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/HongSNSS19,
-  author    = {Changwan Hong and
-               Aravind Sukumaran{-}Rajam and
-               Israt Nisa and
-               Kunal Singh and
-               P. Sadayappan},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Adaptive sparse tiling for sparse matrix multiplication},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {300--314},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295712},
-  doi       = {10.1145/3293883.3295712},
-  timestamp = {Sat, 05 Sep 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/HongSNSS19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295712,
+author = {Hong, Changwan and Sukumaran-Rajam, Aravind and Nisa, Israt and Singh, Kunal and Sadayappan, P.},
+title = {Adaptive Sparse Tiling for Sparse Matrix Multiplication},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295712},
+doi = {10.1145/3293883.3295712},
+abstract = {Tiling is a key technique for data locality optimization and is widely used in high-performance implementations of dense matrix-matrix multiplication for multicore/manycore CPUs and GPUs. However, the irregular and matrix-dependent data access pattern of sparse matrix multiplication makes it challenging to use tiling to enhance data reuse. In this paper, we devise an adaptive tiling strategy and apply it to enhance the performance of two primitives: SpMM (product of sparse matrix and dense matrix) and SDDMM (sampled dense-dense matrix multiplication). In contrast to studies that have resorted to non-standard sparse-matrix representations to enhance performance, we use the standard Compressed Sparse Row (CSR) representation, within which intra-row reordering is performed to enable adaptive tiling. Experimental evaluation using an extensive set of matrices from the Sparse Suite collection demonstrates significant performance improvement over currently available state-of-the-art alternatives.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {300–314},
+numpages = {15},
+keywords = {sampled dense-dense matrix multiplication, multicore/manycore, SpMM, SDDMM, GPU, tiling, sparse matrix-matrix multiplication},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/HuW0WYGG19,
-  author    = {Xiaokang Hu and
-               Changzheng Wei and
-               Jian Li and
-               Brian Will and
-               Ping Yu and
-               Lu Gong and
-               Haibing Guan},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {{QTLS:} high-performance {TLS} asynchronous offload framework with
-               Intel{\textregistered} QuickAssist technology},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {158--172},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295705},
-  doi       = {10.1145/3293883.3295705},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/HuW0WYGG19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295723,
+author = {B\"{a}ttig, Martin and Gross, Thomas R.},
+title = {Encapsulated Open Nesting for STM: Fine-Grained Higher-Level Conflict Detection},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295723},
+doi = {10.1145/3293883.3295723},
+abstract = {Open nesting allows replacing the automatic detection of conflicting memory accesses used in transactional memory (TM) with programmer-specified higher-level conflict detection. Higher-level conflict detection allows removing conflicts of commuting operations where the automatic conflict detection is too conservative. Different conflict detection schemes are incompatible with each other and thus must operate on separate memory locations to prevent inconsistencies. Using open nesting, a programmer implements this separation manually using source code modifications possibly assisted by static checks.Encapsulated open nesting extends open nesting by automatically preventing concurrent accesses to the same memory location using different conflict detection schemes unless all accesses are reads. This approach uses an additional synchronization layer with the same granularity as the existing synchronization of TM. This automatism reduces programming effort by allowing fine-grained use of open nesting and extends the scope of open nesting to abstractions with unknown implementation.We extend the TLRW algorithm to support encapsulated open nesting. An evaluation using an implementation of this algorithm within the Deuce framework shows an average overhead of 21.7% for encapsulated open nesting (compared to regular open nesting) for nine benchmarks while simplifying programming.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {315–326},
+numpages = {12},
+keywords = {open nesting, higher-level conflict detection},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/ItoILNKME19,
-  author    = {Yuki Ito and
-               Haruki Imai and
-               Tung D. Le and
-               Yasushi Negishi and
-               Kiyokuni Kawachiya and
-               Ryo Matsumiya and
-               Toshio Endo},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Profiling based out-of-core hybrid method for large neural networks:
-               poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {399--400},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3298790},
-  doi       = {10.1145/3293883.3298790},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ItoILNKME19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295719,
+author = {Jordan, Herbert and Suboti\'{c}, Pavle and Zhao, David and Scholz, Bernhard},
+title = {A Specialized B-Tree for Concurrent Datalog Evaluation},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295719},
+doi = {10.1145/3293883.3295719},
+abstract = {Modern Datalog engines are employed in industrial applications such as graph-databases, networks, and static program analysis. To cope with vast amount of data, Datalog engines must employ parallel execution strategies, for which specialized concurrent data structures are of paramount importance.In this paper, we introduce a specialized B-tree data structure for an open-source Datalog compiler written in C++. Our data structure has been specialized for Datalog workloads running on shared-memory multi-core computers. It features (1) an optimistic locking protocol for scalability, (2) is highly tuned, and (3) uses the notion of "hints" to re-use the results of previously performed tree traversals to exploit data ordering properties exhibited by Datalog evaluation. In parallel micro-benchmarks, the new data structure achieves up to 59\texttimes{} higher performance than state-of-the-art industrial standards, while integrated into a Datalog engine it accounts for 3\texttimes{} higher, overall system performance.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {327–339},
+numpages = {13},
+keywords = {datalog evaluation, optimistic locking, B-tree},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/JavanmardGDATC19,
-  author    = {Mohammad Mahdi Javanmard and
-               Pramod Ganapathi and
-               Rathish Das and
-               Zafar Ahmad and
-               Stephen L. Tschudi and
-               Rezaul Chowdhury},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Toward efficient architecture-independent algorithms for dynamic programs:
-               poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {413--414},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3299109},
-  doi       = {10.1145/3293883.3299109},
-  timestamp = {Sun, 28 Feb 2021 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/JavanmardGDATC19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295732,
+author = {Utterback, Robert and Agrawal, Kunal and Fineman, Jeremy and Lee, I-Ting Angelina},
+title = {Efficient Race Detection with Futures},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295732},
+doi = {10.1145/3293883.3295732},
+abstract = {This paper addresses the problem of provably efficient and practically good on-the-fly determinacy race detection in task parallel programs that use futures. Prior works on determinacy race detection have mostly focused on either task parallel programs that follow a series-parallel dependence structure or ones with unrestricted use of futures that generate arbitrary dependences. In this work, we consider a restricted use of futures and show that we can detect races more efficiently than with general use of futures.Specifically, we present two algorithms: MultiBags and MultiBags+. MultiBags targets programs that use futures in a restricted fashion and runs in time O(T1α(m, n)), where T1 is the sequential running time of the program, α is the inverse Ackermann's function, m is the total number of memory accesses, n is the dynamic count of places at which parallelism is created. Since α is a very slowly growing function (upper bounded by 4 for all practical purposes), it can be treated as a close-to-constant overhead. MultiBags+ is an extension of MultiBags that target programs with general use of futures. It runs in time O((T1 + k2)α(m, n)) where T1, α, m and n are defined as before, and k is the number of future operations in the computation. We implemented both algorithms and empirically demonstrate their efficiency.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {340–354},
+numpages = {15},
+keywords = {dynamic program analysis, determinacy race, race detection, series-parallel maintenance},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/JiangA19,
-  author    = {Peng Jiang and
-               Gagan Agrawal},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Accelerating distributed stochastic gradient descent with adaptive
-               periodic parameter averaging: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {403--404},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3299818},
-  doi       = {10.1145/3293883.3299818},
-  timestamp = {Fri, 27 Nov 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/JiangA19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295702,
+author = {Doherty, Simon and Dongol, Brijesh and Wehrheim, Heike and Derrick, John},
+title = {Verifying C11 Programs Operationally},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295702},
+doi = {10.1145/3293883.3295702},
+abstract = {This paper develops an operational semantics for a release-acquire fragment of the C11 memory model with relaxed accesses. We show that the semantics is both sound and complete with respect to the axiomatic model of Batty et al. The semantics relies on a per-thread notion of observability, which allows one to reason about a weak memory C11 program in program order. On top of this, we develop a proof calculus for invariant-based reasoning, which we use to verify the release-acquire version of Peterson's mutual exclusion algorithm.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {355–365},
+numpages = {11},
+keywords = {soundness and completeness, operational semantics, C11, verification},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/JimenezLM19,
-  author    = {Ivo Jimenez and
-               Jay F. Lofstead and
-               Carlos Maltzahn},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Creating repeatable, reusable experimentation pipelines with popper:
-               tutorial},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {441--442},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3302575},
-  doi       = {10.1145/3293883.3302575},
-  timestamp = {Fri, 27 Mar 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/JimenezLM19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295726,
+author = {Ozkan, Burcu Kulahcioglu and Majumdar, Rupak and Niksic, Filip},
+title = {Checking Linearizability Using Hitting Families},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295726},
+doi = {10.1145/3293883.3295726},
+abstract = {Linearizability is a key correctness property for concurrent data types. Linearizability requires that the behavior of concurrently invoked operations of the data type be equivalent to the behavior in an execution where each operation takes effect at an instantaneous point of time between its invocation and return. Given an execution trace of operations, the problem of verifying its linearizability is NP-complete, and current exhaustive search tools scale poorly.In this work, we empirically show that linearizability of an execution trace is often witnessed by a schedule that orders only a small number of operations (the "linearizability depth") in a specific way, independently of other operations. Accordingly, one can structure the search for linearizability witnesses by exploring schedules of low linearizability depth first. We provide such an algorithm. Key to our algorithm is a procedure to generate a strong d-hitting family of schedules, which is guaranteed to cover all linearizability witnesses of depth d. A strong d-hitting family of schedules of an execution trace consists of a set of schedules, such that for each tuple of d operations in the trace, there is a schedule in the family that (i) executes these operations in the order they appear in the tuple, and (ii) as late as possible in the execution.We show that most linearizable execution traces from existing benchmarks can be witnessed by strongly d-hitting schedules for d ≤ 5. Our result suggests a practical and automated method for showing linearizability of a trace based on a prioritization of schedules parameterized by the lineariz-ability depth.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {366–377},
+numpages = {12},
+keywords = {hitting families, scheduling, concurrent data structures, linearizability},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/JordanSZS19,
-  author    = {Herbert Jordan and
-               Pavle Subotic and
-               David Zhao and
-               Bernhard Scholz},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {A specialized B-tree for concurrent datalog evaluation},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {327--339},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295719},
-  doi       = {10.1145/3293883.3295719},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/JordanSZS19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295724,
+author = {Voss, Caleb and Cogumbreiro, Tiago and Sarkar, Vivek},
+title = {Transitive Joins: A Sound and Efficient Online Deadlock-Avoidance Policy},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295724},
+doi = {10.1145/3293883.3295724},
+abstract = {We introduce a new online deadlock-avoidance policy, Transitive Joins (TJ), that targets programs with dynamic task parallelism and arbitrary join operations. In this model, a computation task can asynchronously spawn new tasks and selectively join (block) on any task for which it has a handle. We prove that TJ soundly guarantees the absence of deadlock cycles among the blocking join operations. We present an algorithm for dynamically verifying TJ and show that TJ results in fewer false positives than the state-of-the-art policy, Known Joins (KJ). We evaluate an implementation of our verifier in comparison to prior work. The evaluation results show that instrumenting a program with a TJ verifier incurs geometric mean overheads of only 1.06\texttimes{} in execution time and 1.09\texttimes{} in memory usage, which is better overall than existing KJ verifiers. TJ is a practical online deadlock-avoidance policy that is applicable to a wide range of parallel programming models.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {378–390},
+numpages = {13},
+keywords = {deadlock avoidance, task parallelism, futures},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 
-@inproceedings{DBLP:conf/ppopp/KalerWW19,
-  author    = {Tim Kaler and
-               Brian Wheatman and
-               Sarah Wooders},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {High-throughput image alignment for connectomics using frugal snap
-               judgments: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {433--434},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3301495},
-  doi       = {10.1145/3293883.3301495},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/KalerWW19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/KaraouiCLKOMR19,
-  author    = {Mohamed L. Karaoui and
-               Anthony Carno and
-               Robert Lyerly and
-               Sang{-}Hoon Kim and
-               Pierre Olivier and
-               Changwoo Min and
-               Binoy Ravindran},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Scheduling {HPC} workloads on heterogeneous-ISA architectures: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {409--410},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295717},
-  doi       = {10.1145/3293883.3295717},
-  timestamp = {Tue, 29 Dec 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/KaraouiCLKOMR19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/KovalAE19,
-  author    = {Nikita Koval and
-               Dan Alistarh and
-               Roman Elizarov},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Lock-free channels for programming via communicating sequential processes:
-               poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {417--418},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3297000},
-  doi       = {10.1145/3293883.3297000},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/KovalAE19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/KuttlerPBWHBH19,
-  author    = {Martin K{\"{u}}ttler and
-               Maksym Planeta and
-               Jan Bierbaum and
-               Carsten Weinhold and
-               Hermann H{\"{a}}rtig and
-               Amnon Barak and
-               Torsten Hoefler},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Corrected trees for reliable group communication},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {287--299},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295721},
-  doi       = {10.1145/3293883.3295721},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/KuttlerPBWHBH19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/LakhotiaKPP19,
-  author    = {Kartik Lakhotia and
-               Rajgopal Kannan and
-               Sourav Pati and
-               Viktor K. Prasanna},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {{GPOP:} a cache and memory-efficient framework for graph processing
-               over partitions},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {393--394},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3299108},
-  doi       = {10.1145/3293883.3299108},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/LakhotiaKPP19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/Li0YJL19,
-  author    = {Xiuhong Li and
-               Yun Liang and
-               Shengen Yan and
-               Liancheng Jia and
-               Yinghan Li},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {A coordinated tiling and batching framework for efficient {GEMM} on
-               GPUs},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {229--241},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295734},
-  doi       = {10.1145/3293883.3295734},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/Li0YJL19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/MengLTS19,
-  author    = {Ke Meng and
-               Jiajia Li and
-               Guangming Tan and
-               Ninghui Sun},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {A pattern based algorithmic autotuner for graph processing on GPUs},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {201--213},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295716},
-  doi       = {10.1145/3293883.3295716},
-  timestamp = {Mon, 02 Nov 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/MengLTS19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/MuellerBD19,
-  author    = {Frank Mueller and
-               Greg Byrd and
-               Patrick Dreher},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Programming quantum computers: a primer with {IBM} {Q} and D-Wave
-               exercises},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {451},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3302578},
-  doi       = {10.1145/3293883.3302578},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/MuellerBD19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/Ni0PKW19,
-  author    = {Xiang Ni and
-               Scott Schneider and
-               Raju Pavuluri and
-               Jonathan Kaus and
-               Kun{-}Lung Wu},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Automated multi-dimensional elasticity for streaming runtimes: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {427--428},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3301492},
-  doi       = {10.1145/3293883.3301492},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/Ni0PKW19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/NovaesPGP19,
-  author    = {Marcelo Novaes and
-               Vinicius Petrucci and
-               Abdoulaye Gamati{\'{e}} and
-               Fernando Magno Quint{\~{a}}o Pereira},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Compiler-assisted adaptive program scheduling in big.LITTLE systems:
-               poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {429--430},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3301493},
-  doi       = {10.1145/3293883.3301493},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/NovaesPGP19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/OhZSZY19,
-  author    = {Chanyoung Oh and
-               Zhen Zheng and
-               Xipeng Shen and
-               Jidong Zhai and
-               Youngmin Yi},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {GOPipe: a granularity-oblivious programming framework for pipelined
-               stencil executions on {GPU}},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {431--432},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3301494},
-  doi       = {10.1145/3293883.3301494},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/OhZSZY19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/OzkanMN19,
-  author    = {Burcu Kulahcioglu Ozkan and
-               Rupak Majumdar and
-               Filip Niksic},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Checking linearizability using hitting families},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {366--377},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295726},
-  doi       = {10.1145/3293883.3295726},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/OzkanMN19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/PandaAS19,
-  author    = {Dhabaleswar K. Panda and
-               Ammar Ahmad Awan and
-               Hari Subramoni},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {High performance distributed deep learning: a beginner's guide},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {452--454},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3302260},
-  doi       = {10.1145/3293883.3302260},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/PandaAS19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/SaadKJHP19,
-  author    = {Mohamed M. Saad and
-               Masoomeh Javidi Kishi and
-               Shihao Jing and
-               Sandeep Hans and
-               Roberto Palmieri},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Processing transactions in a predefined order},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {120--132},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295730},
-  doi       = {10.1145/3293883.3295730},
-  timestamp = {Sat, 05 Sep 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/SaadKJHP19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/SakdhnagoolSE19,
-  author    = {Putt Sakdhnagool and
-               Amit Sabne and
-               Rudolf Eigenmann},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Optimizing {GPU} programs by register demotion: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {405--406},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3297859},
-  doi       = {10.1145/3293883.3297859},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/SakdhnagoolSE19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/SingerXL19,
-  author    = {Kyle Singer and
-               Yifan Xu and
-               I{-}Ting Angelina Lee},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Proactive work stealing for futures},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {257--271},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295735},
-  doi       = {10.1145/3293883.3295735},
-  timestamp = {Mon, 02 Nov 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/SingerXL19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/SinghN19,
-  author    = {Somesh Singh and
-               Rupesh Nasre},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Optimizing graph processing on GPUs using approximate computing: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {395--396},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295736},
-  doi       = {10.1145/3293883.3295736},
-  timestamp = {Mon, 29 Jun 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/SinghN19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/SrikanthanFCD19,
-  author    = {Sharanyan Srikanthan and
-               Princeton Ferro and
-               Sayak Chakraborti and
-               Sandhya Dwarkadas},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Managing application parallelism via parallel efficiency regulation:
-               poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {437--438},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3301497},
-  doi       = {10.1145/3293883.3301497},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/SrikanthanFCD19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/SunVN19,
-  author    = {Jiawen Sun and
-               Hans Vandierendonck and
-               Dimitrios S. Nikolopoulos},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {{VEBO:} a vertex- and edge-balanced ordering heuristic to load balance
-               parallel graph processing},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {391--392},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295703},
-  doi       = {10.1145/3293883.3295703},
-  timestamp = {Wed, 25 Sep 2019 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/SunVN19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/UtterbackAFL19,
-  author    = {Robert Utterback and
-               Kunal Agrawal and
-               Jeremy T. Fineman and
-               I{-}Ting Angelina Lee},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Efficient race detection with futures},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {340--354},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295732},
-  doi       = {10.1145/3293883.3295732},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/UtterbackAFL19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/VossCS19,
-  author    = {Caleb Voss and
-               Tiago Cogumbreiro and
-               Vivek Sarkar},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Transitive joins: a sound and efficient online deadlock-avoidance
-               policy},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {378--390},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295724},
-  doi       = {10.1145/3293883.3295724},
-  timestamp = {Mon, 22 Feb 2021 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/VossCS19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/WangGLHZ019,
-  author    = {Hao Wang and
-               Liang Geng and
-               Rubao Lee and
-               Kaixi Hou and
-               Yanfeng Zhang and
-               Xiaodong Zhang},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {SEP-graph: finding shortest execution paths for graph processing under
-               a hybrid framework on {GPU}},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {38--52},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295733},
-  doi       = {10.1145/3293883.3295733},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/WangGLHZ019.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/WangSC019,
-  author    = {Qingsen Wang and
-               Pengfei Su and
-               Milind Chabbi and
-               Xu Liu},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Lightweight hardware transactional memory profiling},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {186--200},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295728},
-  doi       = {10.1145/3293883.3295728},
-  timestamp = {Tue, 17 Nov 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/WangSC019.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/WangXYFY19,
-  author    = {Kunpeng Wang and
-               Shizhen Xu and
-               Hongkun Yu and
-               Haohuan Fu and
-               Guangwen Yang},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {GPU-based 3D cryo-EM reconstruction with key-value streams: poster},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {421--422},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3299992},
-  doi       = {10.1145/3293883.3299992},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/WangXYFY19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/WinterMZSS19,
-  author    = {Martin Winter and
-               Daniel Mlakar and
-               Rhaleb Zayer and
-               Hans{-}Peter Seidel and
-               Markus Steinberger},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Adaptive sparse matrix-matrix multiplication on the {GPU}},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {68--81},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295701},
-  doi       = {10.1145/3293883.3295701},
-  timestamp = {Sun, 25 Oct 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/WinterMZSS19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/XiaoWWHT19,
-  author    = {Junmin Xiao and
-               Shijie Wang and
-               Weiqiang Wan and
-               Xuehai Hong and
-               Guangming Tan},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {S-EnKF: co-designing for scalable ensemble Kalman filter},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {15--26},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295722},
-  doi       = {10.1145/3293883.3295722},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/XiaoWWHT19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/Xie0LT19,
-  author    = {Xiaolong Xie and
-               Yun Liang and
-               Xiuhong Li and
-               Wei Tan},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {CuLDA{\_}CGS: solving large-scale {LDA} problems on GPUs},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {435--436},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3301496},
-  doi       = {10.1145/3293883.3301496},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/Xie0LT19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/YanGCOLT19,
-  author    = {Da Yan and
-               Guimu Guo and
-               Md Mashiur Rahman Chowdhury and
-               M. Tamer {\"{O}}zsu and
-               John C. S. Lui and
-               Weida Tan},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {T-thinker: a task-centric distributed framework for compute-intensive
-               divide-and-conquer algorithms},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {411--412},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295709},
-  doi       = {10.1145/3293883.3295709},
-  timestamp = {Tue, 17 Mar 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/YanGCOLT19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/YanLPZ19,
-  author    = {Zhaofeng Yan and
-               Yuzhe Lin and
-               Lu Peng and
-               Weihua Zhang},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Harmonia: a high throughput B+tree for GPUs},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {133--144},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295704},
-  doi       = {10.1145/3293883.3295704},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/YanLPZ19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/YatesS19,
-  author    = {Ryan Yates and
-               Michael L. Scott},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Leveraging hardware {TM} in Haskell},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {94--106},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295711},
-  doi       = {10.1145/3293883.3295711},
-  timestamp = {Fri, 27 Dec 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/YatesS19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ppopp/ZhaoQJ19,
-  author    = {Qi Zhao and
-               Zhengyi Qiu and
-               Guoliang Jin},
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Semantics-aware scheduling policies for synchronization determinism},
-  booktitle = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  pages     = {242--256},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883.3295731},
-  doi       = {10.1145/3293883.3295731},
-  timestamp = {Wed, 19 Aug 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ZhaoQJ19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@proceedings{DBLP:conf/ppopp/2019,
-  editor    = {Jeffrey K. Hollingsworth and
-               Idit Keidar},
-  title     = {Proceedings of the 24th {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2019, Washington, DC, USA,
-               February 16-20, 2019},
-  publisher = {{ACM}},
-  year      = {2019},
-  url       = {https://doi.org/10.1145/3293883},
-  doi       = {10.1145/3293883},
-  isbn      = {978-1-4503-6225-2},
-  timestamp = {Fri, 08 Feb 2019 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/2019.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3293883.3295703,
+author = {Sun, Jiawen and Vandierendonck, Hans and Nikolopoulos, Dimitrios S.},
+title = {VEBO: A Vertex- and Edge-Balanced Ordering Heuristic to Load Balance Parallel Graph Processing},
+year = {2019},
+isbn = {9781450362252},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3293883.3295703},
+doi = {10.1145/3293883.3295703},
+abstract = {This work proposes Vertex- and Edge-Balanced Ordering (VEBO): balance the number of edges and the number of unique destinations of those edges. VEBO balances edges and vertices for graphs with a power-law degree distribution, and ensures an equal degree distribution between partitions. Experimental evaluation on three shared-memory graph processing systems (Ligra, Polymer and GraphGrind) shows that VEBO achieves excellent load balance and improves performance by 1.09\texttimes{} over Ligra, 1.41\texttimes{} over Polymer and 1.65\texttimes{} over GraphGrind, compared to their respective partitioning algorithms, averaged across 8 algorithms and 7 graphs. VEBO improves GraphGrind performance with a speedup of 2.9\texttimes{} over Ligra on average.},
+booktitle = {Proceedings of the 24th Symposium on Principles and Practice of Parallel Programming},
+pages = {391–392},
+numpages = {2},
+location = {Washington, District of Columbia},
+series = {PPoPP '19}
 }
 

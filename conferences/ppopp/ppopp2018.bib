@@ -1,1071 +1,1126 @@
-@inproceedings{DBLP:conf/ppopp/0044WS18,
-  author    = {Yang Liu and
-               Jianguo Wang and
-               Steven Swanson},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Griffin: uniting {CPU} and {GPU} in information retrieval systems
-               for intra-query parallelism},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {327--337},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178512},
-  doi       = {10.1145/3178487.3178512},
-  timestamp = {Tue, 06 Nov 2018 16:57:27 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/0044WS18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178488,
+author = {Wen, Haosen and Izraelevitz, Joseph and Cai, Wentao and Beadle, H. Alan and Scott, Michael L.},
+title = {Interval-Based Memory Reclamation},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178488},
+doi = {10.1145/3178487.3178488},
+abstract = {In this paper we present interval-based reclamation (IBR), a new approach to safe reclamation of disconnected memory blocks in nonblocking concurrent data structures. Safe reclamation is a difficult problem: a thread, before freeing a block, must ensure that no other threads are accessing that block; the required synchronization tends to be expensive. In contrast with epoch-based reclamation, in which threads reserve all blocks created after a certain time, or pointer-based reclamation (e.g., hazard pointers), in which threads reserve individual blocks, IBR allows a thread to reserve all blocks known to have existed in a bounded interval of time. By comparing a thread's reserved interval with the lifetime of a detached but not yet reclaimed block, the system can determine if the block is safe to free. Like hazard pointers, IBR avoids the possibility that a single stalled thread may reserve an unbounded number of blocks; unlike hazard pointers, it avoids a memory fence on most pointer-following operations. It also avoids the need to explicitly "unreserve" a no-longer-needed pointer.We describe three specific IBR schemes (one with several variants) that trade off performance, applicability, and space requirements. IBR requires no special hardware or OS support. In experiments with data structure microbenchmarks, it also compares favorably (in both time and space) to other state-of-the-art approaches, making it an attractive alternative for libraries of concurrent data structures.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {1–13},
+numpages = {13},
+keywords = {shared memory, garbage collection, parallel algorithms},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/AcarACR18,
-  author    = {Umut A. Acar and
-               Vitaly Aksenov and
-               Arthur Chargu{\'{e}}raud and
-               Mike Rainey},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Performance challenges in modular parallel programs},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {381--382},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178516},
-  doi       = {10.1145/3178487.3178516},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/AcarACR18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178488,
+author = {Wen, Haosen and Izraelevitz, Joseph and Cai, Wentao and Beadle, H. Alan and Scott, Michael L.},
+title = {Interval-Based Memory Reclamation},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178488},
+doi = {10.1145/3200691.3178488},
+abstract = {In this paper we present interval-based reclamation (IBR), a new approach to safe reclamation of disconnected memory blocks in nonblocking concurrent data structures. Safe reclamation is a difficult problem: a thread, before freeing a block, must ensure that no other threads are accessing that block; the required synchronization tends to be expensive. In contrast with epoch-based reclamation, in which threads reserve all blocks created after a certain time, or pointer-based reclamation (e.g., hazard pointers), in which threads reserve individual blocks, IBR allows a thread to reserve all blocks known to have existed in a bounded interval of time. By comparing a thread's reserved interval with the lifetime of a detached but not yet reclaimed block, the system can determine if the block is safe to free. Like hazard pointers, IBR avoids the possibility that a single stalled thread may reserve an unbounded number of blocks; unlike hazard pointers, it avoids a memory fence on most pointer-following operations. It also avoids the need to explicitly "unreserve" a no-longer-needed pointer.We describe three specific IBR schemes (one with several variants) that trade off performance, applicability, and space requirements. IBR requires no special hardware or OS support. In experiments with data structure microbenchmarks, it also compares favorably (in both time and space) to other state-of-the-art approaches, making it an attractive alternative for libraries of concurrent data structures.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {1–13},
+numpages = {13},
+keywords = {garbage collection, parallel algorithms, shared memory}
 }
 
-@inproceedings{DBLP:conf/ppopp/Arbel-Raviv018,
-  author    = {Maya Arbel{-}Raviv and
-               Trevor Brown},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Harnessing epoch-based reclamation for efficient range queries},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {14--27},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178489},
-  doi       = {10.1145/3178487.3178489},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/Arbel-Raviv018.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178489,
+author = {Arbel-Raviv, Maya and Brown, Trevor},
+title = {Harnessing Epoch-Based Reclamation for Efficient Range Queries},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178489},
+doi = {10.1145/3178487.3178489},
+abstract = {Concurrent sets with range query operations are highly desirable in applications such as in-memory databases. However, few set implementations offer range queries. Known techniques for augmenting data structures with range queries (or operations that can be used to build range queries) have numerous problems that limit their usefulness. For example, they impose high overhead or rely heavily on garbage collection. In this work, we show how to augment data structures with highly efficient range queries, without relying on garbage collection. We identify a property of epoch-based memory reclamation algorithms that makes them ideal for implementing range queries, and produce three algorithms, which use locks, transactional memory and lock-free techniques, respectively. Our algorithms are applicable to more data structures than previous work, and are shown to be highly efficient on a large scale Intel system.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {14–27},
+numpages = {14},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/ArifV18,
-  author    = {Mahwish Arif and
-               Hans Vandierendonck},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Reducing the burden of parallel loop schedulers for many-core processors},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {383--384},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178517},
-  doi       = {10.1145/3178487.3178517},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ArifV18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178489,
+author = {Arbel-Raviv, Maya and Brown, Trevor},
+title = {Harnessing Epoch-Based Reclamation for Efficient Range Queries},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178489},
+doi = {10.1145/3200691.3178489},
+abstract = {Concurrent sets with range query operations are highly desirable in applications such as in-memory databases. However, few set implementations offer range queries. Known techniques for augmenting data structures with range queries (or operations that can be used to build range queries) have numerous problems that limit their usefulness. For example, they impose high overhead or rely heavily on garbage collection. In this work, we show how to augment data structures with highly efficient range queries, without relying on garbage collection. We identify a property of epoch-based memory reclamation algorithms that makes them ideal for implementing range queries, and produce three algorithms, which use locks, transactional memory and lock-free techniques, respectively. Our algorithms are applicable to more data structures than previous work, and are shown to be highly efficient on a large scale Intel system.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {14–27},
+numpages = {14}
 }
 
-@inproceedings{DBLP:conf/ppopp/BarreraCMALV18,
-  author    = {Isaac {S{\\'{a}}nchez Barrera} and
-               Marc Casas and
-               Miquel Moret{\'{o}} and
-               Eduard Ayguad{\'{e}} and
-               Jes{\'{u}}s Labarta and
-               Mateo Valero},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Graph partitioning applied to {DAG} scheduling to reduce {NUMA} effects},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {419--420},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178535},
-  doi       = {10.1145/3178487.3178535},
-  timestamp = {Sat, 19 Oct 2019 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/BarreraCMALV18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178490,
+author = {Friedman, Michal and Herlihy, Maurice and Marathe, Virendra and Petrank, Erez},
+title = {A Persistent Lock-Free Queue for Non-Volatile Memory},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178490},
+doi = {10.1145/3178487.3178490},
+abstract = {Non-volatile memory is expected to coexist with (or even displace) volatile DRAM for main memory in upcoming architectures. This has led to increasing interest in the problem of designing and specifying durable data structures that can recover from system crashes. Data structures may be designed to satisfy stricter or weaker durability guarantees to provide a balance between the strength of the provided guarantees and performance overhead. This paper proposes three novel implementations of a concurrent lock-free queue. These implementations illustrate algorithmic challenges in building persistent lock-free data structures with different levels of durability guarantees. In presenting these challenges, the proposed algorithmic designs, and the different durability guarantees, we hope to shed light on ways to build a wide variety of durable data structures. We implemented the various designs and compared their performance overhead to a simple queue design for standard (volatile) memory.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {28–40},
+numpages = {13},
+keywords = {non-blocking, concurrent data structures, lock-free, non-volatile memory},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/BelviranliLVB18,
-  author    = {Mehmet E. Belviranli and
-               Seyong Lee and
-               Jeffrey S. Vetter and
-               Laxmi N. Bhuyan},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Juggler: a dependence-aware task-based execution framework for GPUs},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {54--67},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178492},
-  doi       = {10.1145/3178487.3178492},
-  timestamp = {Tue, 29 Dec 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/BelviranliLVB18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178490,
+author = {Friedman, Michal and Herlihy, Maurice and Marathe, Virendra and Petrank, Erez},
+title = {A Persistent Lock-Free Queue for Non-Volatile Memory},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178490},
+doi = {10.1145/3200691.3178490},
+abstract = {Non-volatile memory is expected to coexist with (or even displace) volatile DRAM for main memory in upcoming architectures. This has led to increasing interest in the problem of designing and specifying durable data structures that can recover from system crashes. Data structures may be designed to satisfy stricter or weaker durability guarantees to provide a balance between the strength of the provided guarantees and performance overhead. This paper proposes three novel implementations of a concurrent lock-free queue. These implementations illustrate algorithmic challenges in building persistent lock-free data structures with different levels of durability guarantees. In presenting these challenges, the proposed algorithmic designs, and the different durability guarantees, we hope to shed light on ways to build a wide variety of durable data structures. We implemented the various designs and compared their performance overhead to a simple queue design for standard (volatile) memory.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {28–40},
+numpages = {13},
+keywords = {non-volatile memory, concurrent data structures, non-blocking, lock-free}
 }
 
-@inproceedings{DBLP:conf/ppopp/ChabbiWL18,
-  author    = {Milind Chabbi and
-               Shasha Wen and
-               Xu Liu},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Featherlight on-the-fly false-sharing detection},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {152--167},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178499},
-  doi       = {10.1145/3178487.3178499},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ChabbiWL18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178491,
+author = {Wang, Linnan and Ye, Jinmian and Zhao, Yiyang and Wu, Wei and Li, Ang and Song, Shuaiwen Leon and Xu, Zenglin and Kraska, Tim},
+title = {Superneurons: Dynamic GPU Memory Management for Training Deep Neural Networks},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178491},
+doi = {10.1145/3178487.3178491},
+abstract = {Going deeper and wider in neural architectures improves their accuracy, while the limited GPU DRAM places an undesired restriction on the network design domain. Deep Learning (DL) practitioners either need to change to less desired network architectures, or nontrivially dissect a network across multiGPUs. These distract DL practitioners from concentrating on their original machine learning tasks. We present SuperNeurons: a dynamic GPU memory scheduling runtime to enable the network training far beyond the GPU DRAM capacity. SuperNeurons features 3 memory optimizations, Liveness Analysis, Unified Tensor Pool, and Cost-Aware Recomputation; together they effectively reduce the network-wide peak memory usage down to the maximal memory usage among layers. We also address the performance issues in these memory-saving techniques. Given the limited GPU DRAM, SuperNeurons not only provisions the necessary memory for the training, but also dynamically allocates the memory for convolution workspaces to achieve the high performance. Evaluations against Caffe, Torch, MXNet and TensorFlow have demonstrated that SuperNeurons trains at least 3.2432 deeper network than current ones with the leading performance. Particularly, SuperNeurons can train ResNet2500 that has 104 basic network layers on a 12GB K40c.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {41–53},
+numpages = {13},
+keywords = {neural networks, GPU memory management, runtime scheduling},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/CohenPL18,
-  author    = {Nachshon Cohen and
-               Erez Petrank and
-               James R. Larus},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Reducing transaction aborts by looking to the future},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {385--386},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178518},
-  doi       = {10.1145/3178487.3178518},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/CohenPL18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178491,
+author = {Wang, Linnan and Ye, Jinmian and Zhao, Yiyang and Wu, Wei and Li, Ang and Song, Shuaiwen Leon and Xu, Zenglin and Kraska, Tim},
+title = {Superneurons: Dynamic GPU Memory Management for Training Deep Neural Networks},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178491},
+doi = {10.1145/3200691.3178491},
+abstract = {Going deeper and wider in neural architectures improves their accuracy, while the limited GPU DRAM places an undesired restriction on the network design domain. Deep Learning (DL) practitioners either need to change to less desired network architectures, or nontrivially dissect a network across multiGPUs. These distract DL practitioners from concentrating on their original machine learning tasks. We present SuperNeurons: a dynamic GPU memory scheduling runtime to enable the network training far beyond the GPU DRAM capacity. SuperNeurons features 3 memory optimizations, Liveness Analysis, Unified Tensor Pool, and Cost-Aware Recomputation; together they effectively reduce the network-wide peak memory usage down to the maximal memory usage among layers. We also address the performance issues in these memory-saving techniques. Given the limited GPU DRAM, SuperNeurons not only provisions the necessary memory for the training, but also dynamically allocates the memory for convolution workspaces to achieve the high performance. Evaluations against Caffe, Torch, MXNet and TensorFlow have demonstrated that SuperNeurons trains at least 3.2432 deeper network than current ones with the leading performance. Particularly, SuperNeurons can train ResNet2500 that has 104 basic network layers on a 12GB K40c.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {41–53},
+numpages = {13},
+keywords = {runtime scheduling, GPU memory management, neural networks}
 }
 
-@inproceedings{DBLP:conf/ppopp/CorreiaR18,
-  author    = {Andreia Correia and
-               Pedro Ramalhete},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Strong trylocks for reader-writer locks},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {387--388},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178519},
-  doi       = {10.1145/3178487.3178519},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/CorreiaR18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178492,
+author = {Belviranli, Mehmet E. and Lee, Seyong and Vetter, Jeffrey S. and Bhuyan, Laxmi N.},
+title = {Juggler: A Dependence-Aware Task-Based Execution Framework for GPUs},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178492},
+doi = {10.1145/3178487.3178492},
+abstract = {Scientific applications with single instruction, multiple data (SIMD) computations show considerable performance improvements when run on today's graphics processing units (GPUs). However, the existence of data dependences across thread blocks may significantly impact the speedup by requiring global synchronization across multiprocessors (SMs) inside the GPU. To efficiently run applications with interblock data dependences, we need fine-granular task-based execution models that will treat SMs inside a GPU as stand-alone parallel processing units. Such a scheme will enable faster execution by utilizing all internal computation elements inside the GPU and eliminating unnecessary waits during device-wide global barriers.In this paper, we propose Juggler, a task-based execution scheme for GPU workloads with data dependences. The Juggler framework takes applications embedding OpenMP 4.5 tasks as input and executes them on the GPU via an efficient in-device runtime, hence eliminating the need for kernel-wide global synchronization. Juggler requires no or little modification to the source code, and once launched, the runtime entirely runs on the GPU without relying on the host through the entire execution. We have evaluated Juggler on an NVIDIA Tesla P100 GPU and obtained up to 31% performance improvement against global barrier based implementation, with minimal runtime overhead.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {54–67},
+numpages = {14},
+keywords = {task-based execution, GP-GPU programming, data dependence, openMP 4.5},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/DongMD18,
-  author    = {Yao Dong and
-               Ana Milanova and
-               Julian Dolby},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {SecureMR: secure mapreduce using homomorphic encryption and program
-               partitioning},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {389--390},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178520},
-  doi       = {10.1145/3178487.3178520},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/DongMD18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178492,
+author = {Belviranli, Mehmet E. and Lee, Seyong and Vetter, Jeffrey S. and Bhuyan, Laxmi N.},
+title = {Juggler: A Dependence-Aware Task-Based Execution Framework for GPUs},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178492},
+doi = {10.1145/3200691.3178492},
+abstract = {Scientific applications with single instruction, multiple data (SIMD) computations show considerable performance improvements when run on today's graphics processing units (GPUs). However, the existence of data dependences across thread blocks may significantly impact the speedup by requiring global synchronization across multiprocessors (SMs) inside the GPU. To efficiently run applications with interblock data dependences, we need fine-granular task-based execution models that will treat SMs inside a GPU as stand-alone parallel processing units. Such a scheme will enable faster execution by utilizing all internal computation elements inside the GPU and eliminating unnecessary waits during device-wide global barriers.In this paper, we propose Juggler, a task-based execution scheme for GPU workloads with data dependences. The Juggler framework takes applications embedding OpenMP 4.5 tasks as input and executes them on the GPU via an efficient in-device runtime, hence eliminating the need for kernel-wide global synchronization. Juggler requires no or little modification to the source code, and once launched, the runtime entirely runs on the GPU without relying on the host through the entire execution. We have evaluated Juggler on an NVIDIA Tesla P100 GPU and obtained up to 31% performance improvement against global barrier based implementation, with minimal runtime overhead.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {54–67},
+numpages = {14},
+keywords = {data dependence, GP-GPU programming, openMP 4.5, task-based execution}
 }
 
-@inproceedings{DBLP:conf/ppopp/Drachsler-Cohen18,
-  author    = {Dana Drachsler{-}Cohen and
-               Martin T. Vechev and
-               Eran Yahav},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Practical concurrent traversals in search trees},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {207--218},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178503},
-  doi       = {10.1145/3178487.3178503},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/Drachsler-Cohen18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178493,
+author = {Kotsifakou, Maria and Srivastava, Prakalp and Sinclair, Matthew D. and Komuravelli, Rakesh and Adve, Vikram and Adve, Sarita},
+title = {HPVM: Heterogeneous Parallel Virtual Machine},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178493},
+doi = {10.1145/3178487.3178493},
+abstract = {We propose a parallel program representation for heterogeneous systems, designed to enable performance portability across a wide range of popular parallel hardware, including GPUs, vector instruction sets, multicore CPUs and potentially FPGAs. Our representation, which we call HPVM, is a hierarchical dataflow graph with shared memory and vector instructions. HPVM supports three important capabilities for programming heterogeneous systems: a compiler intermediate representation (IR), a virtual instruction set (ISA), and a basis for runtime scheduling; previous systems focus on only one of these capabilities. As a compiler IR, HPVM aims to enable effective code generation and optimization for heterogeneous systems. As a virtual ISA, it can be used to ship executable programs, in order to achieve both functional portability and performance portability across such systems. At runtime, HPVM enables flexible scheduling policies, both through the graph structure and the ability to compile individual nodes in a program to any of the target devices on a system. We have implemented a prototype HPVM system, defining the HPVM IR as an extension of the LLVM compiler IR, compiler optimizations that operate directly on HPVM graphs, and code generators that translate the virtual ISA to NVIDIA GPUs, Intel's AVX vector units, and to multicore X86-64 processors. Experimental results show that HPVM optimizations achieve significant performance improvements, HPVM translators achieve performance competitive with manually developed OpenCL code for both GPUs and vector hardware, and that runtime scheduling policies can make use of both program and runtime information to exploit the flexible compilation capabilities. Overall, we conclude that the HPVM representation is a promising basis for achieving performance portability and for implementing parallelizing compilers for heterogeneous parallel systems.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {68–80},
+numpages = {13},
+keywords = {GPU, heterogeneous systems, vector SIMD, compiler, parallel IR, virtual ISA},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/FirozZL18,
-  author    = {Jesun Sahariar Firoz and
-               Marcin Zalewski and
-               Andrew Lumsdaine},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {A scalable distance-1 vertex coloring algorithm for power-law graphs},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {391--392},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178521},
-  doi       = {10.1145/3178487.3178521},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/FirozZL18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178493,
+author = {Kotsifakou, Maria and Srivastava, Prakalp and Sinclair, Matthew D. and Komuravelli, Rakesh and Adve, Vikram and Adve, Sarita},
+title = {HPVM: Heterogeneous Parallel Virtual Machine},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178493},
+doi = {10.1145/3200691.3178493},
+abstract = {We propose a parallel program representation for heterogeneous systems, designed to enable performance portability across a wide range of popular parallel hardware, including GPUs, vector instruction sets, multicore CPUs and potentially FPGAs. Our representation, which we call HPVM, is a hierarchical dataflow graph with shared memory and vector instructions. HPVM supports three important capabilities for programming heterogeneous systems: a compiler intermediate representation (IR), a virtual instruction set (ISA), and a basis for runtime scheduling; previous systems focus on only one of these capabilities. As a compiler IR, HPVM aims to enable effective code generation and optimization for heterogeneous systems. As a virtual ISA, it can be used to ship executable programs, in order to achieve both functional portability and performance portability across such systems. At runtime, HPVM enables flexible scheduling policies, both through the graph structure and the ability to compile individual nodes in a program to any of the target devices on a system. We have implemented a prototype HPVM system, defining the HPVM IR as an extension of the LLVM compiler IR, compiler optimizations that operate directly on HPVM graphs, and code generators that translate the virtual ISA to NVIDIA GPUs, Intel's AVX vector units, and to multicore X86-64 processors. Experimental results show that HPVM optimizations achieve significant performance improvements, HPVM translators achieve performance competitive with manually developed OpenCL code for both GPUs and vector hardware, and that runtime scheduling policies can make use of both program and runtime information to exploit the flexible compilation capabilities. Overall, we conclude that the HPVM representation is a promising basis for achieving performance portability and for implementing parallelizing compilers for heterogeneous parallel systems.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {68–80},
+numpages = {13},
+keywords = {GPU, parallel IR, vector SIMD, compiler, heterogeneous systems, virtual ISA}
 }
 
-@inproceedings{DBLP:conf/ppopp/FriedmanHMP18,
-  author    = {Michal Friedman and
-               Maurice Herlihy and
-               Virendra J. Marathe and
-               Erez Petrank},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {A persistent lock-free queue for non-volatile memory},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {28--40},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178490},
-  doi       = {10.1145/3178487.3178490},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/FriedmanHMP18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178494,
+author = {Guatto, Adrien and Westrick, Sam and Raghunathan, Ram and Acar, Umut and Fluet, Matthew},
+title = {Hierarchical Memory Management for Mutable State},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178494},
+doi = {10.1145/3178487.3178494},
+abstract = {It is well known that modern functional programming languages are naturally amenable to parallel programming. Achieving efficient parallelism using functional languages, however, remains difficult. Perhaps the most important reason for this is their lack of support for efficient in-place updates, i.e., mutation, which is important for the implementation of both parallel algorithms and the run-time system services (e.g., schedulers and synchronization primitives) used to execute them.In this paper, we propose techniques for efficient mutation in parallel functional languages. To this end, we couple the memory manager with the thread scheduler to make reading and updating data allocated by nested threads efficient. We describe the key algorithms behind our technique, implement them in the MLton Standard ML compiler, and present an empirical evaluation. Our experiments show that the approach performs well, significantly improving efficiency over existing functional language implementations.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {81–93},
+numpages = {13},
+keywords = {mutation, promotion, garbage collection, parallel functional language implementation, hierarchical heaps},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/FuSQG18,
-  author    = {Zhouwang Fu and
-               Tao Song and
-               Zhengwei Qi and
-               Haibing Guan},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Efficient shuffle management with SCache for {DAG} computing frameworks},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {305--316},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178510},
-  doi       = {10.1145/3178487.3178510},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/FuSQG18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178494,
+author = {Guatto, Adrien and Westrick, Sam and Raghunathan, Ram and Acar, Umut and Fluet, Matthew},
+title = {Hierarchical Memory Management for Mutable State},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178494},
+doi = {10.1145/3200691.3178494},
+abstract = {It is well known that modern functional programming languages are naturally amenable to parallel programming. Achieving efficient parallelism using functional languages, however, remains difficult. Perhaps the most important reason for this is their lack of support for efficient in-place updates, i.e., mutation, which is important for the implementation of both parallel algorithms and the run-time system services (e.g., schedulers and synchronization primitives) used to execute them.In this paper, we propose techniques for efficient mutation in parallel functional languages. To this end, we couple the memory manager with the thread scheduler to make reading and updating data allocated by nested threads efficient. We describe the key algorithms behind our technique, implement them in the MLton Standard ML compiler, and present an empirical evaluation. Our experiments show that the approach performs well, significantly improving efficiency over existing functional language implementations.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {81–93},
+numpages = {13},
+keywords = {garbage collection, hierarchical heaps, promotion, mutation, parallel functional language implementation}
 }
 
-@inproceedings{DBLP:conf/ppopp/GianinazziKPBH18,
-  author    = {Lukas Gianinazzi and
-               Pavel Kalvoda and
-               Alessandro De Palma and
-               Maciej Besta and
-               Torsten Hoefler},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Communication-avoiding parallel minimum cuts and connected components},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {219--232},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178504},
-  doi       = {10.1145/3178487.3178504},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/GianinazziKPBH18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178495,
+author = {Zhao, Yue and Li, Jiajia and Liao, Chunhua and Shen, Xipeng},
+title = {Bridging the Gap between Deep Learning and Sparse Matrix Format Selection},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178495},
+doi = {10.1145/3178487.3178495},
+abstract = {This work presents a systematic exploration on the promise and special challenges of deep learning for sparse matrix format selection---a problem of determining the best storage format for a matrix to maximize the performance of Sparse Matrix Vector Multiplication (SpMV). It describes how to effectively bridge the gap between deep learning and the special needs of the pillar HPC problem through a set of techniques on matrix representations, deep learning structure, and cross-architecture model migrations. The new solution cuts format selection errors by two thirds, and improves SpMV performance by 1.73X on average over the state of the art.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {94–108},
+numpages = {15},
+keywords = {convolutional neural network, SpMV, deep learning, sparse matrix, format selection},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/GrossmanLK18,
-  author    = {Samuel Grossman and
-               Heiner Litz and
-               Christos Kozyrakis},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Making pull-based graph processing performant},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {246--260},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178506},
-  doi       = {10.1145/3178487.3178506},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/GrossmanLK18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178495,
+author = {Zhao, Yue and Li, Jiajia and Liao, Chunhua and Shen, Xipeng},
+title = {Bridging the Gap between Deep Learning and Sparse Matrix Format Selection},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178495},
+doi = {10.1145/3200691.3178495},
+abstract = {This work presents a systematic exploration on the promise and special challenges of deep learning for sparse matrix format selection---a problem of determining the best storage format for a matrix to maximize the performance of Sparse Matrix Vector Multiplication (SpMV). It describes how to effectively bridge the gap between deep learning and the special needs of the pillar HPC problem through a set of techniques on matrix representations, deep learning structure, and cross-architecture model migrations. The new solution cuts format selection errors by two thirds, and improves SpMV performance by 1.73X on average over the state of the art.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {94–108},
+numpages = {15},
+keywords = {sparse matrix, convolutional neural network, format selection, deep learning, SpMV}
 }
 
-@inproceedings{DBLP:conf/ppopp/GuattoWRAF18,
-  author    = {Adrien Guatto and
-               Sam Westrick and
-               Ram Raghunathan and
-               Umut A. Acar and
-               Matthew Fluet},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Hierarchical memory management for mutable state},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {81--93},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178494},
-  doi       = {10.1145/3178487.3178494},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/GuattoWRAF18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178496,
+author = {Jia, Zhen and Zlateski, Aleksandar and Durand, Fredo and Li, Kai},
+title = {Optimizing N-Dimensional, Winograd-Based Convolution for Manycore CPUs},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178496},
+doi = {10.1145/3178487.3178496},
+abstract = {Recent work on Winograd-based convolution allows for a great reduction of computational complexity, but existing implementations are limited to 2D data and a single kernel size of 3 by 3. They can achieve only slightly better, and often worse performance than better optimized, direct convolution implementations. We propose and implement an algorithm for N-dimensional Winograd-based convolution that allows arbitrary kernel sizes and is optimized for manycore CPUs. Our algorithm achieves high hardware utilization through a series of optimizations. Our experiments show that on modern ConvNets, our optimized implementation, is on average more than 3 x, and sometimes 8 x faster than other state-of-the-art CPU implementations on an Intel Xeon Phi manycore processors. Moreover, our implementation on the Xeon Phi achieves competitive performance for 2D ConvNets and superior performance for 3D ConvNets, compared with the best GPU implementations.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {109–123},
+numpages = {15},
+keywords = {winograd, parallelization, vectorization, convolution},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/HayashiBJT18,
-  author    = {Koby Hayashi and
-               Grey Ballard and
-               Yujie Jiang and
-               Michael J. Tobia},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Shared-memory parallelization of {MTTKRP} for dense tensors},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {393--394},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178522},
-  doi       = {10.1145/3178487.3178522},
-  timestamp = {Sat, 19 Oct 2019 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/HayashiBJT18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178496,
+author = {Jia, Zhen and Zlateski, Aleksandar and Durand, Fredo and Li, Kai},
+title = {Optimizing N-Dimensional, Winograd-Based Convolution for Manycore CPUs},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178496},
+doi = {10.1145/3200691.3178496},
+abstract = {Recent work on Winograd-based convolution allows for a great reduction of computational complexity, but existing implementations are limited to 2D data and a single kernel size of 3 by 3. They can achieve only slightly better, and often worse performance than better optimized, direct convolution implementations. We propose and implement an algorithm for N-dimensional Winograd-based convolution that allows arbitrary kernel sizes and is optimized for manycore CPUs. Our algorithm achieves high hardware utilization through a series of optimizations. Our experiments show that on modern ConvNets, our optimized implementation, is on average more than 3 x, and sometimes 8 x faster than other state-of-the-art CPU implementations on an Intel Xeon Phi manycore processors. Moreover, our implementation on the Xeon Phi achieves competitive performance for 2D ConvNets and superior performance for 3D ConvNets, compared with the best GPU implementations.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {109–123},
+numpages = {15},
+keywords = {vectorization, convolution, winograd, parallelization}
 }
 
-@inproceedings{DBLP:conf/ppopp/HongSKRKPRS18,
-  author    = {Changwan Hong and
-               Aravind Sukumaran{-}Rajam and
-               Jinsung Kim and
-               Prashant Singh Rawat and
-               Sriram Krishnamoorthy and
-               Louis{-}No{\"{e}}l Pouchet and
-               Fabrice Rastello and
-               P. Sadayappan},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Performance modeling for GPUs using abstract kernel emulation},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {397--398},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178524},
-  doi       = {10.1145/3178487.3178524},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/HongSKRKPRS18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178497,
+author = {Tang, Xiongchao and Zhai, Jidong and Qian, Xuehai and He, Bingsheng and Xue, Wei and Chen, Wenguang},
+title = {VS<span class="smallcaps SmallerCapital">ensor</span>: Leveraging Fixed-Workload Snippets of Programs for Performance Variance Detection},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178497},
+doi = {10.1145/3178487.3178497},
+abstract = {Performance variance becomes increasingly challenging on current large-scale HPC systems. Even using a fixed number of computing nodes, the execution time of several runs can vary significantly. Many parallel programs executing on supercomputers suffer from such variance. Performance variance not only causes unpredictable performance requirement violations, but also makes it unintuitive to understand the program behavior. Despite prior efforts, efficient on-line detection of performance variance remains an open problem.In this paper, we propose vSensor, a novel approach for light-weight and on-line performance variance detection. The key insight is that, instead of solely relying on an external detector, the source code of a program itself could reveal the runtime performance characteristics. Specifically, many parallel programs contain code snippets that are executed repeatedly with an invariant quantity of work. Based on this observation, we use compiler techniques to automatically identify these fixed-workload snippets and use them as performance <u>v</u>ariance <u>sensor</u>s (v-sensors) that enable effective detection. We evaluate vSensor with a variety of parallel programs on the Tianhe-2 system. Results show that vSensor can effectively detect performance variance on HPC systems. The performance overhead is smaller than 4% with up to 16,384 processes. In particular, with vSensor, we found a bad node with slow memory that slowed a program's performance by 21%. As a showcase, we also detected a severe network performance problem that caused a 3.37X slowdown for an HPC kernel program on the Tianhe-2 system.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {124–136},
+numpages = {13},
+keywords = {system noise, anomaly detection, compiler analysis, performance variance},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/JangdaB18,
-  author    = {Abhinav Jangda and
-               Uday Bondhugula},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {An effective fusion and tile size model for optimizing image processing
-               pipelines},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {261--275},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178507},
-  doi       = {10.1145/3178487.3178507},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/JangdaB18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178497,
+author = {Tang, Xiongchao and Zhai, Jidong and Qian, Xuehai and He, Bingsheng and Xue, Wei and Chen, Wenguang},
+title = {VS<span class="smallcaps SmallerCapital">ensor</span>: Leveraging Fixed-Workload Snippets of Programs for Performance Variance Detection},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178497},
+doi = {10.1145/3200691.3178497},
+abstract = {Performance variance becomes increasingly challenging on current large-scale HPC systems. Even using a fixed number of computing nodes, the execution time of several runs can vary significantly. Many parallel programs executing on supercomputers suffer from such variance. Performance variance not only causes unpredictable performance requirement violations, but also makes it unintuitive to understand the program behavior. Despite prior efforts, efficient on-line detection of performance variance remains an open problem.In this paper, we propose vSensor, a novel approach for light-weight and on-line performance variance detection. The key insight is that, instead of solely relying on an external detector, the source code of a program itself could reveal the runtime performance characteristics. Specifically, many parallel programs contain code snippets that are executed repeatedly with an invariant quantity of work. Based on this observation, we use compiler techniques to automatically identify these fixed-workload snippets and use them as performance <u>v</u>ariance <u>sensor</u>s (v-sensors) that enable effective detection. We evaluate vSensor with a variety of parallel programs on the Tianhe-2 system. Results show that vSensor can effectively detect performance variance on HPC systems. The performance overhead is smaller than 4% with up to 16,384 processes. In particular, with vSensor, we found a bad node with slow memory that slowed a program's performance by 21%. As a showcase, we also detected a severe network performance problem that caused a 3.37X slowdown for an HPC kernel program on the Tianhe-2 system.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {124–136},
+numpages = {13},
+keywords = {performance variance, compiler analysis, system noise, anomaly detection}
 }
 
-@inproceedings{DBLP:conf/ppopp/JiaZDL18,
-  author    = {Zhen Jia and
-               Aleksandar Zlateski and
-               Fr{\'{e}}do Durand and
-               Kai Li},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Optimizing N-dimensional, winograd-based convolution for manycore
-               CPUs},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {109--123},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178496},
-  doi       = {10.1145/3178487.3178496},
-  timestamp = {Mon, 31 Aug 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/JiaZDL18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178498,
+author = {Prokopec, Aleksandar},
+title = {Cache-Tries: Concurrent Lock-Free Hash Tries with Constant-Time Operations},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178498},
+doi = {10.1145/3178487.3178498},
+abstract = {Concurrent non-blocking hash tries have good cache locality, and horizontally scalable operations. However, operations on most existing concurrent hash tries run in O(log n) time.In this paper, we show that the concurrent hash trie operations can run in expected constant time. We present a novel lock-free concurrent hash trie design that exerts less pressure on the memory allocator. This hash trie is augmented with a quiescently consistent cache, which permits the basic operations to run in expected O(1) time. We show a statistical analysis for the constant-time bound, which, to the best of our knowledge, is the first such proof for hash tries. We also prove the safety, lock-freedom and linearizability properties. On typical workloads, our implementation demonstrates up to 5X performance improvements with respect to the previous hash trie variants.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {137–151},
+numpages = {15},
+keywords = {expected constant time, concurrent data structures, lock-free hash tries, constant-time hash tries},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/JiangA18,
-  author    = {Peng Jiang and
-               Gagan Agrawal},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Revealing parallel scans and reductions in sequential loops through
-               function reconstruction},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {395--396},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178523},
-  doi       = {10.1145/3178487.3178523},
-  timestamp = {Fri, 27 Nov 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/JiangA18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178498,
+author = {Prokopec, Aleksandar},
+title = {Cache-Tries: Concurrent Lock-Free Hash Tries with Constant-Time Operations},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178498},
+doi = {10.1145/3200691.3178498},
+abstract = {Concurrent non-blocking hash tries have good cache locality, and horizontally scalable operations. However, operations on most existing concurrent hash tries run in O(log n) time.In this paper, we show that the concurrent hash trie operations can run in expected constant time. We present a novel lock-free concurrent hash trie design that exerts less pressure on the memory allocator. This hash trie is augmented with a quiescently consistent cache, which permits the basic operations to run in expected O(1) time. We show a statistical analysis for the constant-time bound, which, to the best of our knowledge, is the first such proof for hash tries. We also prove the safety, lock-freedom and linearizability properties. On typical workloads, our implementation demonstrates up to 5X performance improvements with respect to the previous hash trie variants.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {137–151},
+numpages = {15},
+keywords = {constant-time hash tries, expected constant time, concurrent data structures, lock-free hash tries}
 }
 
-@inproceedings{DBLP:conf/ppopp/JordanSS18,
-  author    = {Herbert Jordan and
-               Bernhard Scholz and
-               Pavle Subotic},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Two concurrent data structures for efficient datalog query processing},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {399--400},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178525},
-  doi       = {10.1145/3178487.3178525},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/JordanSS18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178499,
+author = {Chabbi, Milind and Wen, Shasha and Liu, Xu},
+title = {Featherlight On-the-Fly False-Sharing Detection},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178499},
+doi = {10.1145/3178487.3178499},
+abstract = {Shared-memory parallel programs routinely suffer from false sharing---a performance degradation caused by different threads accessing different variables that reside on the same CPU cacheline and at least one variable is modified. State-of-the-art tools detect false sharing via a heavyweight process of logging memory accesses and feeding the ensuing access traces to an offline cache simulator. We have developed Feather, a lightweight, on-the-fly false-sharing detection tool. Feather achieves low overhead by exploiting two hardware features ubiquitous in commodity CPUs: the performance monitoring units (PMU) and debug registers. Additionally, Feather is a first-of-its-kind tool to detect false sharing in multi-process applications that use shared memory. Feather allowed us to scale false-sharing detection to myriad codes. Feather detected several false-sharing cases in important multi-core and multi-process codes including previous PPoPP artifacts. Eliminating false sharing resulted in dramatic (up to 16x) speedups.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {152–167},
+numpages = {16},
+keywords = {sampling, profiling, debug registers, false sharing, PMU},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/Kerbl0KSS18,
-  author    = {Bernhard Kerbl and
-               J{\"{o}}rg M{\"{u}}ller and
-               Michael Kenzel and
-               Dieter Schmalstieg and
-               Markus Steinberger},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {A scalable queue for work distribution on GPUs},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {401--402},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178526},
-  doi       = {10.1145/3178487.3178526},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/Kerbl0KSS18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178499,
+author = {Chabbi, Milind and Wen, Shasha and Liu, Xu},
+title = {Featherlight On-the-Fly False-Sharing Detection},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178499},
+doi = {10.1145/3200691.3178499},
+abstract = {Shared-memory parallel programs routinely suffer from false sharing---a performance degradation caused by different threads accessing different variables that reside on the same CPU cacheline and at least one variable is modified. State-of-the-art tools detect false sharing via a heavyweight process of logging memory accesses and feeding the ensuing access traces to an offline cache simulator. We have developed Feather, a lightweight, on-the-fly false-sharing detection tool. Feather achieves low overhead by exploiting two hardware features ubiquitous in commodity CPUs: the performance monitoring units (PMU) and debug registers. Additionally, Feather is a first-of-its-kind tool to detect false sharing in multi-process applications that use shared memory. Feather allowed us to scale false-sharing detection to myriad codes. Feather detected several false-sharing cases in important multi-core and multi-process codes including previous PPoPP artifacts. Eliminating false sharing resulted in dramatic (up to 16x) speedups.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {152–167},
+numpages = {16},
+keywords = {debug registers, sampling, PMU, profiling, false sharing}
 }
 
-@inproceedings{DBLP:conf/ppopp/KhyzhaAGR18,
-  author    = {Artem Khyzha and
-               Hagit Attiya and
-               Alexey Gotsman and
-               Noam Rinetzky},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Safe privatization in transactional memory},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {233--245},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178505},
-  doi       = {10.1145/3178487.3178505},
-  timestamp = {Sun, 25 Oct 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/KhyzhaAGR18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178500,
+author = {Rawat, Prashant Singh and Rastello, Fabrice and Sukumaran-Rajam, Aravind and Pouchet, Louis-No\"{e}l and Rountev, Atanas and Sadayappan, P.},
+title = {Register Optimizations for Stencils on GPUs},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178500},
+doi = {10.1145/3178487.3178500},
+abstract = {The recent advent of compute-intensive GPU architecture has allowed application developers to explore high-order 3D stencils for better computational accuracy. A common optimization strategy for such stencils is to expose sufficient data reuse by means such as loop unrolling, with the expectation of register-level reuse. However, the resulting code is often highly constrained by register pressure. While current state-of-the-art register allocators are satisfactory for most applications, they are unable to effectively manage register pressure for such complex high-order stencils, resulting in sub-optimal code with a large number of register spills. In this paper, we develop a statement reordering framework that models stencil computations as a DAG of trees with shared leaves, and adapts an optimal scheduling algorithm for minimizing register usage for expression trees. The effectiveness of the approach is demonstrated through experimental results on a range of stencils extracted from application codes.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {168–182},
+numpages = {15},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/KotsifakouSSKAA18,
-  author    = {Maria Kotsifakou and
-               Prakalp Srivastava and
-               Matthew D. Sinclair and
-               Rakesh Komuravelli and
-               Vikram S. Adve and
-               Sarita V. Adve},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {{HPVM:} heterogeneous parallel virtual machine},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {68--80},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178493},
-  doi       = {10.1145/3178487.3178493},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/KotsifakouSSKAA18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178500,
+author = {Rawat, Prashant Singh and Rastello, Fabrice and Sukumaran-Rajam, Aravind and Pouchet, Louis-No\"{e}l and Rountev, Atanas and Sadayappan, P.},
+title = {Register Optimizations for Stencils on GPUs},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178500},
+doi = {10.1145/3200691.3178500},
+abstract = {The recent advent of compute-intensive GPU architecture has allowed application developers to explore high-order 3D stencils for better computational accuracy. A common optimization strategy for such stencils is to expose sufficient data reuse by means such as loop unrolling, with the expectation of register-level reuse. However, the resulting code is often highly constrained by register pressure. While current state-of-the-art register allocators are satisfactory for most applications, they are unable to effectively manage register pressure for such complex high-order stencils, resulting in sub-optimal code with a large number of register spills. In this paper, we develop a statement reordering framework that models stencil computations as a DAG of trees with shared leaves, and adapts an optimal scheduling algorithm for minimizing register usage for expression trees. The effectiveness of the approach is demonstrated through experimental results on a range of stencils extracted from application codes.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {168–182},
+numpages = {15}
 }
 
-@inproceedings{DBLP:conf/ppopp/LiTWS18,
-  author    = {Xueqi Li and
-               Guangming Tan and
-               Bingchen Wang and
-               Ninghui Sun},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {High-performance genomic analysis framework with in-memory computing},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {317--328},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178511},
-  doi       = {10.1145/3178487.3178511},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/LiTWS18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178501,
+author = {Zheng, Da and Mhembere, Disa and Vogelstein, Joshua T. and Priebe, Carey E. and Burns, Randal},
+title = {FlashR: Parallelize and Scale R for Machine Learning Using SSDs},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178501},
+doi = {10.1145/3178487.3178501},
+abstract = {R is one of the most popular programming languages for statistics and machine learning, but it is slow and unable to scale to large datasets. The general approach for having an efficient algorithm in R is to implement it in C or FORTRAN and provide an R wrapper. FlashR accelerates and scales existing R code by parallelizing a large number of matrix functions in the R base package and scaling them beyond memory capacity with solid-state drives (SSDs). FlashR performs memory hierarchy aware execution to speed up parallelized R code by (i) evaluating matrix operations lazily, (ii) performing all operations in a DAG in a single execution and with only one pass over data to increase the ratio of computation to I/O, (iii) performing two levels of matrix partitioning and reordering computation on matrix partitions to reduce data movement in the memory hierarchy. We evaluate FlashR on various machine learning and statistics algorithms on inputs of up to four billion data points. Despite the huge performance gap between SSDs and RAM, FlashR on SSDs closely tracks the performance of FlashR in memory for many algorithms. The R implementations in FlashR outperforms H2O and Spark MLlib by a factor of 3 -- 20.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {183–194},
+numpages = {12},
+keywords = {R, solid-state drives, parallel, machine learning},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/LichtBH18,
-  author    = {Johannes de Fine Licht and
-               Michaela Blott and
-               Torsten Hoefler},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Designing scalable {FPGA} architectures using high-level synthesis},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {403--404},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178527},
-  doi       = {10.1145/3178487.3178527},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/LichtBH18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178501,
+author = {Zheng, Da and Mhembere, Disa and Vogelstein, Joshua T. and Priebe, Carey E. and Burns, Randal},
+title = {FlashR: Parallelize and Scale R for Machine Learning Using SSDs},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178501},
+doi = {10.1145/3200691.3178501},
+abstract = {R is one of the most popular programming languages for statistics and machine learning, but it is slow and unable to scale to large datasets. The general approach for having an efficient algorithm in R is to implement it in C or FORTRAN and provide an R wrapper. FlashR accelerates and scales existing R code by parallelizing a large number of matrix functions in the R base package and scaling them beyond memory capacity with solid-state drives (SSDs). FlashR performs memory hierarchy aware execution to speed up parallelized R code by (i) evaluating matrix operations lazily, (ii) performing all operations in a DAG in a single execution and with only one pass over data to increase the ratio of computation to I/O, (iii) performing two levels of matrix partitioning and reordering computation on matrix partitions to reduce data movement in the memory hierarchy. We evaluate FlashR on various machine learning and statistics algorithms on inputs of up to four billion data points. Despite the huge performance gap between SSDs and RAM, FlashR on SSDs closely tracks the performance of FlashR in memory for many algorithms. The R implementations in FlashR outperforms H2O and Spark MLlib by a factor of 3 -- 20.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {183–194},
+numpages = {12},
+keywords = {machine learning, solid-state drives, R, parallel}
 }
 
-@inproceedings{DBLP:conf/ppopp/LiuHLT18,
-  author    = {Junhong Liu and
-               Xin He and
-               Weifeng Liu and
-               Guangming Tan},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Register-based implementation of the sparse general matrix-matrix
-               multiplication on GPUs},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {407--408},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178529},
-  doi       = {10.1145/3178487.3178529},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/LiuHLT18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178502,
+author = {Menon, Harshitha and Mohror, Kathryn},
+title = {D<span class="smallcaps SmallerCapital">is</span>CV<span class="smallcaps SmallerCapital">ar</span>: Discovering Critical Variables Using Algorithmic Differentiation for Transient Faults},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178502},
+doi = {10.1145/3178487.3178502},
+abstract = {Aggressive technology scaling trends have made the hardware of high performance computing (HPC) systems more susceptible to faults. Some of these faults can lead to silent data corruption (SDC), and represent a serious problem because they alter the HPC simulation results. In this paper, we present a full-coverage, systematic methodology called DisCVar to identify critical variables in HPC applications for protection against SDC. DisCVar uses automatic differentiation (AD) to determine the sensitivity of the simulation output to errors in program variables. We empirically validate our approach in identifying vulnerable variables by comparing the results against a full-coverage code-level fault injection campaign. We find that our DisCVar correctly identifies the variables that are critical to ensure application SDC resilience with a high degree of accuracy compared to the results of the fault injection campaign. Additionally, DisCVar requires only two executions of the target program to generate results, whereas in our experiments we needed to perform millions of executions to get the same information from a fault injection campaign.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {195–206},
+numpages = {12},
+keywords = {reliability, silent data corruption, soft error, algorithmic differentiation},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/LiuJJSM18,
-  author    = {Bo Liu and
-               Wenbin Jiang and
-               Hai Jin and
-               Xuanhua Shi and
-               Yang Ma},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Layrub: layer-centric {GPU} memory reuse and data migration in extreme-scale
-               deep learning systems},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {405--406},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178528},
-  doi       = {10.1145/3178487.3178528},
-  timestamp = {Sun, 25 Oct 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/LiuJJSM18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178502,
+author = {Menon, Harshitha and Mohror, Kathryn},
+title = {D<span class="smallcaps SmallerCapital">is</span>CV<span class="smallcaps SmallerCapital">ar</span>: Discovering Critical Variables Using Algorithmic Differentiation for Transient Faults},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178502},
+doi = {10.1145/3200691.3178502},
+abstract = {Aggressive technology scaling trends have made the hardware of high performance computing (HPC) systems more susceptible to faults. Some of these faults can lead to silent data corruption (SDC), and represent a serious problem because they alter the HPC simulation results. In this paper, we present a full-coverage, systematic methodology called DisCVar to identify critical variables in HPC applications for protection against SDC. DisCVar uses automatic differentiation (AD) to determine the sensitivity of the simulation output to errors in program variables. We empirically validate our approach in identifying vulnerable variables by comparing the results against a full-coverage code-level fault injection campaign. We find that our DisCVar correctly identifies the variables that are critical to ensure application SDC resilience with a high degree of accuracy compared to the results of the fault injection campaign. Additionally, DisCVar requires only two executions of the target program to generate results, whereas in our experiments we needed to perform millions of executions to get the same information from a fault injection campaign.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {195–206},
+numpages = {12},
+keywords = {silent data corruption, soft error, algorithmic differentiation, reliability}
 }
 
-@inproceedings{DBLP:conf/ppopp/MenonM18,
-  author    = {Harshitha Menon and
-               Kathryn Mohror},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {DisCVar: discovering critical variables using algorithmic differentiation
-               for transient faults},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {195--206},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178502},
-  doi       = {10.1145/3178487.3178502},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/MenonM18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178503,
+author = {Drachsler-Cohen, Dana and Vechev, Martin and Yahav, Eran},
+title = {Practical Concurrent Traversals in Search Trees},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178503},
+doi = {10.1145/3178487.3178503},
+abstract = {Operations of concurrent objects often employ optimistic concurrency-control schemes that consist of a traversal followed by a validation step. The validation checks if concurrent mutations interfered with the traversal to determine if the operation should proceed or restart. A fundamental challenge is to discover a necessary and sufficient validation check that has to be performed to guarantee correctness.In this paper, we show a necessary and sufficient condition for validating traversals in search trees. The condition relies on a new concept of succinct path snapshots, which are derived from and embedded in the structure of the tree. We leverage the condition to design a general lock-free membership test suitable for any search tree. We then show how to integrate the validation condition in update operations of (non-rebalancing) binary search trees, internal and external, and AVL trees. We experimentally show that our new algorithms outperform existing ones.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {207–218},
+numpages = {12},
+keywords = {concurrency, search trees},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/MururuGP18,
-  author    = {Girish Mururu and
-               Ada Gavrilovska and
-               Santosh Pande},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Quantifying and reducing execution variance in {STM} via model driven
-               commit optimization},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {409--410},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178530},
-  doi       = {10.1145/3178487.3178530},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/MururuGP18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178503,
+author = {Drachsler-Cohen, Dana and Vechev, Martin and Yahav, Eran},
+title = {Practical Concurrent Traversals in Search Trees},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178503},
+doi = {10.1145/3200691.3178503},
+abstract = {Operations of concurrent objects often employ optimistic concurrency-control schemes that consist of a traversal followed by a validation step. The validation checks if concurrent mutations interfered with the traversal to determine if the operation should proceed or restart. A fundamental challenge is to discover a necessary and sufficient validation check that has to be performed to guarantee correctness.In this paper, we show a necessary and sufficient condition for validating traversals in search trees. The condition relies on a new concept of succinct path snapshots, which are derived from and embedded in the structure of the tree. We leverage the condition to design a general lock-free membership test suitable for any search tree. We then show how to integrate the validation condition in update operations of (non-rebalancing) binary search trees, internal and external, and AVL trees. We experimentally show that our new algorithms outperform existing ones.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {207–218},
+numpages = {12},
+keywords = {concurrency, search trees}
 }
 
-@inproceedings{DBLP:conf/ppopp/ParkCJL18,
-  author    = {Jung{-}Ho Park and
-               Hyungmin Cho and
-               Wookeun Jung and
-               Jaejin Lee},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Transparent {GPU} memory management for DNNs},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {411--412},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178531},
-  doi       = {10.1145/3178487.3178531},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ParkCJL18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178504,
+author = {Gianinazzi, Lukas and Kalvoda, Pavel and De Palma, Alessandro and Besta, Maciej and Hoefler, Torsten},
+title = {Communication-Avoiding Parallel Minimum Cuts and Connected Components},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178504},
+doi = {10.1145/3178487.3178504},
+abstract = {We present novel scalable parallel algorithms for finding global minimum cuts and connected components, which are important and fundamental problems in graph processing. To take advantage of future massively parallel architectures, our algorithms are communication-avoiding: they reduce the costs of communication across the network and the cache hierarchy. The fundamental technique underlying our work is the randomized sparsification of a graph: removing a fraction of graph edges, deriving a solution for such a sparsified graph, and using the result to obtain a solution for the original input. We design and implement sparsification with O(1) synchronization steps. Our global minimum cut algorithm decreases communication costs and computation compared to the state-of-the-art, while our connected components algorithm incurs few cache misses and synchronization steps. We validate our approach by evaluating MPI implementations of the algorithms on a petascale supercomputer. We also provide an approximate variant of the minimum cut algorithm and show that it approximates the exact solutions well while using a fraction of cores in a fraction of time.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {219–232},
+numpages = {14},
+keywords = {graph algorithms, randomized algorithms, minimum cuts, parallel computing},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/PoterT18,
-  author    = {Manuel P{\"{o}}ter and
-               Jesper Larsson Tr{\"{a}}ff},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {\emph{Stamp-it}, amortized constant-time memory reclamation in comparison
-               to five other schemes},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {413--414},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178532},
-  doi       = {10.1145/3178487.3178532},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/PoterT18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178504,
+author = {Gianinazzi, Lukas and Kalvoda, Pavel and De Palma, Alessandro and Besta, Maciej and Hoefler, Torsten},
+title = {Communication-Avoiding Parallel Minimum Cuts and Connected Components},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178504},
+doi = {10.1145/3200691.3178504},
+abstract = {We present novel scalable parallel algorithms for finding global minimum cuts and connected components, which are important and fundamental problems in graph processing. To take advantage of future massively parallel architectures, our algorithms are communication-avoiding: they reduce the costs of communication across the network and the cache hierarchy. The fundamental technique underlying our work is the randomized sparsification of a graph: removing a fraction of graph edges, deriving a solution for such a sparsified graph, and using the result to obtain a solution for the original input. We design and implement sparsification with O(1) synchronization steps. Our global minimum cut algorithm decreases communication costs and computation compared to the state-of-the-art, while our connected components algorithm incurs few cache misses and synchronization steps. We validate our approach by evaluating MPI implementations of the algorithms on a petascale supercomputer. We also provide an approximate variant of the minimum cut algorithm and show that it approximates the exact solutions well while using a fraction of cores in a fraction of time.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {219–232},
+numpages = {14},
+keywords = {minimum cuts, randomized algorithms, parallel computing, graph algorithms}
 }
 
-@inproceedings{DBLP:conf/ppopp/Prokopec18,
-  author    = {Aleksandar Prokopec},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Cache-tries: concurrent lock-free hash tries with constant-time operations},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {137--151},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178498},
-  doi       = {10.1145/3178487.3178498},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/Prokopec18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178505,
+author = {Khyzha, Artem and Attiya, Hagit and Gotsman, Alexey and Rinetzky, Noam},
+title = {Safe Privatization in Transactional Memory},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178505},
+doi = {10.1145/3178487.3178505},
+abstract = {Transactional memory (TM) facilitates the development of concurrent applications by letting the programmer designate certain code blocks as atomic. Programmers using a TM often would like to access the same data both inside and outside transactions, e.g., to improve performance or to support legacy code. In this case, programmers would ideally like the TM to guarantee strong atomicity, where transactions can be viewed as executing atomically also with respect to non-transactional accesses. Since guaranteeing strong atomicity for arbitrary programs is prohibitively expensive, researchers have suggested guaranteeing it only for certain data-race free (DRF) programs, particularly those that follow the privatization idiom: from some point on, threads agree that a given object can be accessed non-transactionally. Supporting privatization safely in a TM is nontrivial, because this often requires correctly inserting transactional fences, which wait until all active transactions complete.Unfortunately, there is currently no consensus on a single definition of transactional DRF, in particular, because no existing notion of DRF takes into account transactional fences. In this paper we propose such a notion and prove that, if a TM satisfies a certain condition generalizing opacity and a program using it is DRF assuming strong atomicity, then the program indeed has strongly atomic semantics. We show that our DRF notion allows the programmer to use privatization idioms. We also propose a method for proving our generalization of opacity and apply it to the TL2 TM.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {233–245},
+numpages = {13},
+keywords = {observational refinement, strong atomicity, privatization, software transactional memory},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/RawatRSPRS18,
-  author    = {Prashant Singh Rawat and
-               Fabrice Rastello and
-               Aravind Sukumaran{-}Rajam and
-               Louis{-}No{\"{e}}l Pouchet and
-               Atanas Rountev and
-               P. Sadayappan},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Register optimizations for stencils on GPUs},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {168--182},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178500},
-  doi       = {10.1145/3178487.3178500},
-  timestamp = {Sat, 05 Sep 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/RawatRSPRS18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178505,
+author = {Khyzha, Artem and Attiya, Hagit and Gotsman, Alexey and Rinetzky, Noam},
+title = {Safe Privatization in Transactional Memory},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178505},
+doi = {10.1145/3200691.3178505},
+abstract = {Transactional memory (TM) facilitates the development of concurrent applications by letting the programmer designate certain code blocks as atomic. Programmers using a TM often would like to access the same data both inside and outside transactions, e.g., to improve performance or to support legacy code. In this case, programmers would ideally like the TM to guarantee strong atomicity, where transactions can be viewed as executing atomically also with respect to non-transactional accesses. Since guaranteeing strong atomicity for arbitrary programs is prohibitively expensive, researchers have suggested guaranteeing it only for certain data-race free (DRF) programs, particularly those that follow the privatization idiom: from some point on, threads agree that a given object can be accessed non-transactionally. Supporting privatization safely in a TM is nontrivial, because this often requires correctly inserting transactional fences, which wait until all active transactions complete.Unfortunately, there is currently no consensus on a single definition of transactional DRF, in particular, because no existing notion of DRF takes into account transactional fences. In this paper we propose such a notion and prove that, if a TM satisfies a certain condition generalizing opacity and a program using it is DRF assuming strong atomicity, then the program indeed has strongly atomic semantics. We show that our DRF notion allows the programmer to use privatization idioms. We also propose a method for proving our generalization of opacity and apply it to the TL2 TM.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {233–245},
+numpages = {13},
+keywords = {observational refinement, privatization, software transactional memory, strong atomicity}
 }
 
-@inproceedings{DBLP:conf/ppopp/ReifS18,
-  author    = {Stefan Reif and
-               Wolfgang Schr{\"{o}}der{-}Preikschat},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {A predictable synchronisation algorithm},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {415--416},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178533},
-  doi       = {10.1145/3178487.3178533},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ReifS18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178506,
+author = {Grossman, Samuel and Litz, Heiner and Kozyrakis, Christos},
+title = {Making Pull-Based Graph Processing Performant},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178506},
+doi = {10.1145/3178487.3178506},
+abstract = {Graph processing engines following either the push-based or pull-based pattern conceptually consist of a two-level nested loop structure. Parallelizing and vectorizing these loops is critical for high overall performance and memory bandwidth utilization. Outer loop parallelization is simple for both engine types but suffers from high load imbalance. This work focuses on inner loop parallelization for pull engines, which when performed naively leads to a significant increase in conflicting memory writes that must be synchronized.Our first contribution is a scheduler-aware interface for parallel loops that allows us to optimize for the common case in which each thread executes several consecutive iterations. This eliminates most write traffic and avoids all synchronization, leading to speedups of up to 50X.Our second contribution is the Vector-Sparse format, which addresses the obstacles to vectorization that stem from the commonly-used Compressed-Sparse data structure. Our new format eliminates unaligned memory accesses and bounds checks within vector operations, two common problems when processing low-degree vertices. Vectorization with Vector-Sparse leads to speedups of up to 2.5X.Our contributions are embodied in Grazelle, a hybrid graph processing framework. On a server equipped with four Intel Xeon E7-4850 v3 processors, Grazelle respectively outperforms Ligra, Polymer, GraphMat, and X-Stream by up to 15.2X, 4.6X, 4.7X, and 66.8X.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {246–260},
+numpages = {15},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/RieblerVKP18,
-  author    = {Heinrich Riebler and
-               Gavin Vaz and
-               Tobias Kenter and
-               Christian Plessl},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Automated code acceleration targeting heterogeneous openCL devices},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {417--418},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178534},
-  doi       = {10.1145/3178487.3178534},
-  timestamp = {Mon, 15 Jun 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/RieblerVKP18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178506,
+author = {Grossman, Samuel and Litz, Heiner and Kozyrakis, Christos},
+title = {Making Pull-Based Graph Processing Performant},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178506},
+doi = {10.1145/3200691.3178506},
+abstract = {Graph processing engines following either the push-based or pull-based pattern conceptually consist of a two-level nested loop structure. Parallelizing and vectorizing these loops is critical for high overall performance and memory bandwidth utilization. Outer loop parallelization is simple for both engine types but suffers from high load imbalance. This work focuses on inner loop parallelization for pull engines, which when performed naively leads to a significant increase in conflicting memory writes that must be synchronized.Our first contribution is a scheduler-aware interface for parallel loops that allows us to optimize for the common case in which each thread executes several consecutive iterations. This eliminates most write traffic and avoids all synchronization, leading to speedups of up to 50X.Our second contribution is the Vector-Sparse format, which addresses the obstacles to vectorization that stem from the commonly-used Compressed-Sparse data structure. Our new format eliminates unaligned memory accesses and bounds checks within vector operations, two common problems when processing low-degree vertices. Vectorization with Vector-Sparse leads to speedups of up to 2.5X.Our contributions are embodied in Grazelle, a hybrid graph processing framework. On a server equipped with four Intel Xeon E7-4850 v3 processors, Grazelle respectively outperforms Ligra, Polymer, GraphMat, and X-Stream by up to 15.2X, 4.6X, 4.7X, and 66.8X.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {246–260},
+numpages = {15}
 }
 
-@inproceedings{DBLP:conf/ppopp/SunFB18,
-  author    = {Yihan Sun and
-               Daniel Ferizovic and
-               Guy E. Blelloch},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {{PAM:} parallel augmented maps},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {290--304},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178509},
-  doi       = {10.1145/3178487.3178509},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/SunFB18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178507,
+author = {Jangda, Abhinav and Bondhugula, Uday},
+title = {An Effective Fusion and Tile Size Model for Optimizing Image Processing Pipelines},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178507},
+doi = {10.1145/3178487.3178507},
+abstract = {Effective models for fusion of loop nests continue to remain a challenge in both general-purpose and domain-specific language (DSL) compilers. The difficulty often arises from the combinatorial explosion of grouping choices and their interaction with parallelism and locality. This paper presents a new fusion algorithm for high-performance domain-specific compilers for image processing pipelines. The fusion algorithm is driven by dynamic programming and explores spaces of fusion possibilities not covered by previous approaches, and is driven by a cost function more concrete and precise in capturing optimization criteria than prior approaches. The fusion model is particularly tailored to the transformation and optimization sequence applied by PolyMage and Halide, two recent DSLs for image processing pipelines. Our model-driven technique when implemented in PolyMage provides significant improvements (up to 4.32X) over PolyMage's approach (which uses auto-tuning to aid its model), and over Halide's automatic approach (by up to 2.46X) on two state-of-the-art shared-memory multicore architectures.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {261–275},
+numpages = {15},
+keywords = {image processing pipelines, fusion, tiling},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/TangZQHXC18,
-  author    = {Xiongchao Tang and
-               Jidong Zhai and
-               Xuehai Qian and
-               Bingsheng He and
-               Wei Xue and
-               Wenguang Chen},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {vSensor: leveraging fixed-workload snippets of programs for performance
-               variance detection},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {124--136},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178497},
-  doi       = {10.1145/3178487.3178497},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/TangZQHXC18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178507,
+author = {Jangda, Abhinav and Bondhugula, Uday},
+title = {An Effective Fusion and Tile Size Model for Optimizing Image Processing Pipelines},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178507},
+doi = {10.1145/3200691.3178507},
+abstract = {Effective models for fusion of loop nests continue to remain a challenge in both general-purpose and domain-specific language (DSL) compilers. The difficulty often arises from the combinatorial explosion of grouping choices and their interaction with parallelism and locality. This paper presents a new fusion algorithm for high-performance domain-specific compilers for image processing pipelines. The fusion algorithm is driven by dynamic programming and explores spaces of fusion possibilities not covered by previous approaches, and is driven by a cost function more concrete and precise in capturing optimization criteria than prior approaches. The fusion model is particularly tailored to the transformation and optimization sequence applied by PolyMage and Halide, two recent DSLs for image processing pipelines. Our model-driven technique when implemented in PolyMage provides significant improvements (up to 4.32X) over PolyMage's approach (which uses auto-tuning to aid its model), and over Halide's automatic approach (by up to 2.46X) on two state-of-the-art shared-memory multicore architectures.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {261–275},
+numpages = {15},
+keywords = {fusion, image processing pipelines, tiling}
 }
 
-@inproceedings{DBLP:conf/ppopp/Volkov18,
-  author    = {Vasily Volkov},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {A microbenchmark to study {GPU} performance models},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {421--422},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178536},
-  doi       = {10.1145/3178487.3178536},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/Volkov18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178508,
+author = {Wang, Lei and Zhuang, Liangji and Chen, Junhang and Cui, Huimin and Lv, Fang and Liu, Ying and Feng, Xiaobing},
+title = {Lazygraph: Lazy Data Coherency for Replicas in Distributed Graph-Parallel Computation},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178508},
+doi = {10.1145/3178487.3178508},
+abstract = {Replicas 1 of a vertex play an important role in existing distributed graph processing systems which make a single vertex to be parallel processed by multiple machines and access remote neighbors locally without any remote access. However, replicas of vertices introduce data coherency problem. Existing distributed graph systems treat replicas of a vertex v as an atomic and indivisible vertex, and use an eager data coherency approach to guarantee replicas atomicity. In eager data coherency approach, any changes to vertex data must be immediately communicated to all replicas of v, thus leading to frequent global synchronizations and communications.In this paper, we propose a lazy data coherency approach, called LazyAsync, which treats replicas of a vertex as independent vertices and maintains the data coherency by computations, rather than communications in existing eager approach. Our approach automatically selects some data coherency points from the graph algorithm, and maintains all replicas to share the same global view only at such points, which means the replicas are enabled to maintain different local views between any two adjacent data coherency points. Based on PowerGraph, we develop a distributed graph processing system LazyGraph to implement the LazyAsync approach and exploit graph-aware optimizations. On a 48-node EC2-like cluster, LazyGraph outperforms PowerGraph on four widely used graph algorithms across a variety of real-world graphs, with a speedup ranging from 1.25x to 10.69x.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {276–289},
+numpages = {14},
+keywords = {lazy data coherency, distributed graph-parallel computation, execution model},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/WangLXW18,
-  author    = {Xinliang Wang and
-               Weifeng Liu and
-               Wei Xue and
-               Li Wu},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {swSpTRSV: a fast sparse triangular solve with sparse level tile layout
-               on sunway architectures},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {338--353},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178513},
-  doi       = {10.1145/3178487.3178513},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/WangLXW18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178508,
+author = {Wang, Lei and Zhuang, Liangji and Chen, Junhang and Cui, Huimin and Lv, Fang and Liu, Ying and Feng, Xiaobing},
+title = {Lazygraph: Lazy Data Coherency for Replicas in Distributed Graph-Parallel Computation},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178508},
+doi = {10.1145/3200691.3178508},
+abstract = {Replicas 1 of a vertex play an important role in existing distributed graph processing systems which make a single vertex to be parallel processed by multiple machines and access remote neighbors locally without any remote access. However, replicas of vertices introduce data coherency problem. Existing distributed graph systems treat replicas of a vertex v as an atomic and indivisible vertex, and use an eager data coherency approach to guarantee replicas atomicity. In eager data coherency approach, any changes to vertex data must be immediately communicated to all replicas of v, thus leading to frequent global synchronizations and communications.In this paper, we propose a lazy data coherency approach, called LazyAsync, which treats replicas of a vertex as independent vertices and maintains the data coherency by computations, rather than communications in existing eager approach. Our approach automatically selects some data coherency points from the graph algorithm, and maintains all replicas to share the same global view only at such points, which means the replicas are enabled to maintain different local views between any two adjacent data coherency points. Based on PowerGraph, we develop a distributed graph processing system LazyGraph to implement the LazyAsync approach and exploit graph-aware optimizations. On a 48-node EC2-like cluster, LazyGraph outperforms PowerGraph on four widely used graph algorithms across a variety of real-world graphs, with a speedup ranging from 1.25x to 10.69x.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {276–289},
+numpages = {14},
+keywords = {distributed graph-parallel computation, lazy data coherency, execution model}
 }
 
-@inproceedings{DBLP:conf/ppopp/WangYZWLSXK18,
-  author    = {Linnan Wang and
-               Jinmian Ye and
-               Yiyang Zhao and
-               Wei Wu and
-               Ang Li and
-               Shuaiwen Leon Song and
-               Zenglin Xu and
-               Tim Kraska},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Superneurons: dynamic {GPU} memory management for training deep neural
-               networks},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {41--53},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178491},
-  doi       = {10.1145/3178487.3178491},
-  timestamp = {Fri, 27 Sep 2019 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/WangYZWLSXK18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178509,
+author = {Sun, Yihan and Ferizovic, Daniel and Belloch, Guy E.},
+title = {PAM: Parallel Augmented Maps},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178509},
+doi = {10.1145/3178487.3178509},
+abstract = {Ordered (key-value) maps are an important and widely-used data type for large-scale data processing frameworks. Beyond simple search, insertion and deletion, more advanced operations such as range extraction, filtering, and bulk updates form a critical part of these frameworks.We describe an interface for ordered maps that is augmented to support fast range queries and sums, and introduce a parallel and concurrent library called PAM (Parallel Augmented Maps) that implements the interface. The interface includes a wide variety of functions on augmented maps ranging from basic insertion and deletion to more interesting functions such as union, intersection, filtering, extracting ranges, splitting, and range-sums. We describe algorithms for these functions that are efficient both in theory and practice.As examples of the use of the interface and the performance of PAM we apply the library to four applications: simple range sums, interval trees, 2D range trees, and ranked word index searching. The interface greatly simplifies the implementation of these data structures over direct implementations. Sequentially the code achieves performance that matches or exceeds existing libraries designed specially for a single application, and in parallel our implementation gets speedups ranging from 40 to 90 on 72 cores with 2-way hyperthreading.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {290–304},
+numpages = {15},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/WangZCCLL018,
-  author    = {Lei Wang and
-               Liangji Zhuang and
-               Junhang Chen and
-               Huimin Cui and
-               Fang Lv and
-               Ying Liu and
-               Xiaobing Feng},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Lazygraph: lazy data coherency for replicas in distributed graph-parallel
-               computation},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {276--289},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178508},
-  doi       = {10.1145/3178487.3178508},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/WangZCCLL018.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178509,
+author = {Sun, Yihan and Ferizovic, Daniel and Belloch, Guy E.},
+title = {PAM: Parallel Augmented Maps},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178509},
+doi = {10.1145/3200691.3178509},
+abstract = {Ordered (key-value) maps are an important and widely-used data type for large-scale data processing frameworks. Beyond simple search, insertion and deletion, more advanced operations such as range extraction, filtering, and bulk updates form a critical part of these frameworks.We describe an interface for ordered maps that is augmented to support fast range queries and sums, and introduce a parallel and concurrent library called PAM (Parallel Augmented Maps) that implements the interface. The interface includes a wide variety of functions on augmented maps ranging from basic insertion and deletion to more interesting functions such as union, intersection, filtering, extracting ranges, splitting, and range-sums. We describe algorithms for these functions that are efficient both in theory and practice.As examples of the use of the interface and the performance of PAM we apply the library to four applications: simple range sums, interval trees, 2D range trees, and ranked word index searching. The interface greatly simplifies the implementation of these data structures over direct implementations. Sequentially the code achieves performance that matches or exceeds existing libraries designed specially for a single application, and in parallel our implementation gets speedups ranging from 40 to 90 on 72 cores with 2-way hyperthreading.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {290–304},
+numpages = {15}
 }
 
-@inproceedings{DBLP:conf/ppopp/WenICBS18,
-  author    = {Haosen Wen and
-               Joseph Izraelevitz and
-               Wentao Cai and
-               H. Alan Beadle and
-               Michael L. Scott},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Interval-based memory reclamation},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {1--13},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178488},
-  doi       = {10.1145/3178487.3178488},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/WenICBS18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178510,
+author = {Fu, Zhouwang and Song, Tao and Qi, Zhengwei and Guan, Haibing},
+title = {Efficient Shuffle Management with SCache for DAG Computing Frameworks},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178510},
+doi = {10.1145/3178487.3178510},
+abstract = {In large-scale data-parallel analytics, shuffle, or the cross-network read and aggregation of partitioned data between tasks with data dependencies, usually brings in large overhead. To reduce shuffle overhead, we present SCache, an open source plug-in system that particularly focuses on shuffle optimization. By extracting and analyzing shuffle dependencies prior to the actual task execution, SCache can adopt heuristic pre-scheduling combining with shuffle size prediction to pre-fetch shuffle data and balance load on each node. Meanwhile, SCache takes full advantage of the system memory to accelerate the shuffle process. We have implemented SCache and customized Spark to use it as the external shuffle service and co-scheduler. The performance of SCache is evaluated with both simulations and testbed experiments on a 50-node Amazon EC2 cluster. Those evaluations have demonstrated that, by incorporating SCache, the shuffle overhead of Spark can be reduced by nearly 89%, and the overall completion time of TPC-DS queries improves 40% on average.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {305–316},
+numpages = {12},
+keywords = {distributed DAG frameworks, optimization, shuffle},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/WilcoxFF18,
-  author    = {James R. Wilcox and
-               Cormac Flanagan and
-               Stephen N. Freund},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {VerifiedFT: a verified, high-performance precise dynamic race detector},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {354--367},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178514},
-  doi       = {10.1145/3178487.3178514},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/WilcoxFF18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178510,
+author = {Fu, Zhouwang and Song, Tao and Qi, Zhengwei and Guan, Haibing},
+title = {Efficient Shuffle Management with SCache for DAG Computing Frameworks},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178510},
+doi = {10.1145/3200691.3178510},
+abstract = {In large-scale data-parallel analytics, shuffle, or the cross-network read and aggregation of partitioned data between tasks with data dependencies, usually brings in large overhead. To reduce shuffle overhead, we present SCache, an open source plug-in system that particularly focuses on shuffle optimization. By extracting and analyzing shuffle dependencies prior to the actual task execution, SCache can adopt heuristic pre-scheduling combining with shuffle size prediction to pre-fetch shuffle data and balance load on each node. Meanwhile, SCache takes full advantage of the system memory to accelerate the shuffle process. We have implemented SCache and customized Spark to use it as the external shuffle service and co-scheduler. The performance of SCache is evaluated with both simulations and testbed experiments on a 50-node Amazon EC2 cluster. Those evaluations have demonstrated that, by incorporating SCache, the shuffle overhead of Spark can be reduced by nearly 89%, and the overall completion time of TPC-DS queries improves 40% on average.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {305–316},
+numpages = {12},
+keywords = {shuffle, distributed DAG frameworks, optimization}
 }
 
-@inproceedings{DBLP:conf/ppopp/XuLA18,
-  author    = {Yifan Xu and
-               I{-}Ting Angelina Lee and
-               Kunal Agrawal},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Efficient parallel determinacy race detection for two-dimensional
-               dags},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {368--380},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178515},
-  doi       = {10.1145/3178487.3178515},
-  timestamp = {Mon, 02 Nov 2020 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/XuLA18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178511,
+author = {Li, Xueqi and Tan, Guangming and Wang, Bingchen and Sun, Ninghui},
+title = {High-Performance Genomic Analysis Framework with in-Memory Computing},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178511},
+doi = {10.1145/3178487.3178511},
+abstract = {In this paper, we propose an in-memory computing framework (called GPF) that provides a set of genomic formats, APIs and a fast genomic engine for large-scale genomic data processing. Our GPF comprises two main components: (1) scalable genomic data formats and API. (2) an advanced execution engine that supports efficient compression of genomic data and eliminates redundancies in the execution engine of our GPF. We further present both system and algorithm-specific implementations for users to build genomic analysis pipeline without any acquaintance of Spark parallel programming. To test the performance of GPF, we built a WGS pipeline on top of our GPF as a test case. Our experimental data indicate that GPF completes Whole-Genome-Sequencing (WGS) analysis of 146.9G bases Human Platinum Genome in running time of 24 minutes, with over 50% parallel efficiency when used on 2048 CPU cores. Together, our GPF framework provides a fast and general engine for large-scale genomic data processing which supports in-memory computing.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {317–328},
+numpages = {12},
+keywords = {in-memory computing, high-performance computing, genomic analysis framework},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/ZhaoHBWJ18,
-  author    = {Tuowen Zhao and
-               Mary W. Hall and
-               Protonu Basu and
-               Samuel Williams and
-               Hans Johansen},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {{SIMD} code generation for stencils on brick decompositions},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {423--424},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178537},
-  doi       = {10.1145/3178487.3178537},
-  timestamp = {Sat, 19 Oct 2019 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ZhaoHBWJ18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178511,
+author = {Li, Xueqi and Tan, Guangming and Wang, Bingchen and Sun, Ninghui},
+title = {High-Performance Genomic Analysis Framework with in-Memory Computing},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178511},
+doi = {10.1145/3200691.3178511},
+abstract = {In this paper, we propose an in-memory computing framework (called GPF) that provides a set of genomic formats, APIs and a fast genomic engine for large-scale genomic data processing. Our GPF comprises two main components: (1) scalable genomic data formats and API. (2) an advanced execution engine that supports efficient compression of genomic data and eliminates redundancies in the execution engine of our GPF. We further present both system and algorithm-specific implementations for users to build genomic analysis pipeline without any acquaintance of Spark parallel programming. To test the performance of GPF, we built a WGS pipeline on top of our GPF as a test case. Our experimental data indicate that GPF completes Whole-Genome-Sequencing (WGS) analysis of 146.9G bases Human Platinum Genome in running time of 24 minutes, with over 50% parallel efficiency when used on 2048 CPU cores. Together, our GPF framework provides a fast and general engine for large-scale genomic data processing which supports in-memory computing.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {317–328},
+numpages = {12},
+keywords = {in-memory computing, high-performance computing, genomic analysis framework}
 }
 
-@inproceedings{DBLP:conf/ppopp/ZhaoLLS18,
-  author    = {Yue Zhao and
-               Jiajia Li and
-               Chunhua Liao and
-               Xipeng Shen},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Bridging the gap between deep learning and sparse matrix format selection},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {94--108},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178495},
-  doi       = {10.1145/3178487.3178495},
-  timestamp = {Sun, 25 Oct 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ZhaoLLS18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178512,
+author = {Liu, Yang and Wang, Jianguo and Swanson, Steven},
+title = {Griffin: Uniting CPU and GPU in Information Retrieval Systems for Intra-Query Parallelism},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178512},
+doi = {10.1145/3178487.3178512},
+abstract = {Interactive information retrieval services, such as enterprise search and document search, must provide relevant results with consistent, low response times in the face of rapidly growing data sets and query loads. These growing demands have led researchers to consider a wide range of optimizations to reduce response latency, including query processing parallelization and acceleration with co-processors such as GPUs. However, previous work runs queries either on GPU or CPU, ignoring the fact that the best processor for a given query depends on the query's characteristics, which may change as the processing proceeds.We present Griffin, an IR systems that dynamically combines GPU- and CPU-based algorithms to process individual queries according to their characteristics. Griffin uses state-of-the-art CPU-based query processing techniques and incorporates a novel approach to GPU-based query evaluation. Our GPU-based approach, as far as we know, achieves the best available GPU search performance by leveraging a new compression scheme and exploiting an advanced merge-based intersection algorithm. We evaluate Griffin with real world queries and datasets, and show that it improves query performance by 10x compared to a highly optimized CPU-only implementation, and 1.5x compared to our GPU-approach running alone. We also find that Griffin helps reduce the 95th-, 99th-, and 99.9th-percentile query response time by 10.4x, 16.1x, and 26.8x, respectively.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {327–337},
+numpages = {11},
+keywords = {parallel algorithms, GPU, search engines, query processing, information retrieval},
+location = {Vienna, Austria},
+series = {PPoPP '18}
 }
 
-@inproceedings{DBLP:conf/ppopp/ZhengMVPB18,
-  author    = {Da Zheng and
-               Disa Mhembere and
-               Joshua T. Vogelstein and
-               Carey E. Priebe and
-               Randal C. Burns},
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {FlashR: parallelize and scale {R} for machine learning using SSDs},
-  booktitle = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  pages     = {183--194},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487.3178501},
-  doi       = {10.1145/3178487.3178501},
-  timestamp = {Sun, 25 Oct 2020 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/conf/ppopp/ZhengMVPB18.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{10.1145/3200691.3178512,
+author = {Liu, Yang and Wang, Jianguo and Swanson, Steven},
+title = {Griffin: Uniting CPU and GPU in Information Retrieval Systems for Intra-Query Parallelism},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178512},
+doi = {10.1145/3200691.3178512},
+abstract = {Interactive information retrieval services, such as enterprise search and document search, must provide relevant results with consistent, low response times in the face of rapidly growing data sets and query loads. These growing demands have led researchers to consider a wide range of optimizations to reduce response latency, including query processing parallelization and acceleration with co-processors such as GPUs. However, previous work runs queries either on GPU or CPU, ignoring the fact that the best processor for a given query depends on the query's characteristics, which may change as the processing proceeds.We present Griffin, an IR systems that dynamically combines GPU- and CPU-based algorithms to process individual queries according to their characteristics. Griffin uses state-of-the-art CPU-based query processing techniques and incorporates a novel approach to GPU-based query evaluation. Our GPU-based approach, as far as we know, achieves the best available GPU search performance by leveraging a new compression scheme and exploiting an advanced merge-based intersection algorithm. We evaluate Griffin with real world queries and datasets, and show that it improves query performance by 10x compared to a highly optimized CPU-only implementation, and 1.5x compared to our GPU-approach running alone. We also find that Griffin helps reduce the 95th-, 99th-, and 99.9th-percentile query response time by 10.4x, 16.1x, and 26.8x, respectively.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {327–337},
+numpages = {11},
+keywords = {GPU, query processing, parallel algorithms, search engines, information retrieval}
 }
 
-@proceedings{DBLP:conf/ppopp/2018,
-  editor    = {Andreas Krall and
-               Thomas R. Gross},
-  title     = {Proceedings of the 23rd {ACM} {SIGPLAN} Symposium on Principles and
-               Practice of Parallel Programming, PPoPP 2018, Vienna, Austria, February
-               24-28, 2018},
-  publisher = {{ACM}},
-  year      = {2018},
-  url       = {https://doi.org/10.1145/3178487},
-  doi       = {10.1145/3178487},
-  timestamp = {Tue, 06 Nov 2018 00:00:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/ppopp/2018.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{10.1145/3178487.3178513,
+author = {Wang, Xinliang and Liu, Weifeng and Xue, Wei and Wu, Li},
+title = {SwSpTRSV: A Fast Sparse Triangular Solve with Sparse Level Tile Layout on Sunway Architectures},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178513},
+doi = {10.1145/3178487.3178513},
+abstract = {Sparse triangular solve (SpTRSV) is one of the most important kernels in many real-world applications. Currently, much research on parallel SpTRSV focuses on level-set construction for reducing the number of inter-level synchronizations. However, the out-of-control data reuse and high cost for global memory or shared cache access in inter-level synchronization have been largely neglected in existing work.In this paper, we propose a novel data layout called Sparse Level Tile to make all data reuse under control, and design a Producer-Consumer pairing method to make any inter-level synchronization only happen in very fast register communication. We implement our data layout and algorithms on an SW26010 many-core processor, which is the main building-block of the current world fastest supercomputer Sunway Taihulight. The experimental results of testing all 2057 square matrices from the Florida Matrix Collection show that our method achieves an average speedup of 6.9 and the best speedup of 38.5 over parallel level-set method. Our method also outperforms the latest methods on a KNC many-core processor in 1856 matrices and the latest methods on a K80 GPU in 1672 matrices, respectively.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {338–353},
+numpages = {16},
+keywords = {sparse triangular solve, sunway architecture, sparse level tile, sparse matrix},
+location = {Vienna, Austria},
+series = {PPoPP '18}
+}
+
+@article{10.1145/3200691.3178513,
+author = {Wang, Xinliang and Liu, Weifeng and Xue, Wei and Wu, Li},
+title = {SwSpTRSV: A Fast Sparse Triangular Solve with Sparse Level Tile Layout on Sunway Architectures},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178513},
+doi = {10.1145/3200691.3178513},
+abstract = {Sparse triangular solve (SpTRSV) is one of the most important kernels in many real-world applications. Currently, much research on parallel SpTRSV focuses on level-set construction for reducing the number of inter-level synchronizations. However, the out-of-control data reuse and high cost for global memory or shared cache access in inter-level synchronization have been largely neglected in existing work.In this paper, we propose a novel data layout called Sparse Level Tile to make all data reuse under control, and design a Producer-Consumer pairing method to make any inter-level synchronization only happen in very fast register communication. We implement our data layout and algorithms on an SW26010 many-core processor, which is the main building-block of the current world fastest supercomputer Sunway Taihulight. The experimental results of testing all 2057 square matrices from the Florida Matrix Collection show that our method achieves an average speedup of 6.9 and the best speedup of 38.5 over parallel level-set method. Our method also outperforms the latest methods on a KNC many-core processor in 1856 matrices and the latest methods on a K80 GPU in 1672 matrices, respectively.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {338–353},
+numpages = {16},
+keywords = {sparse matrix, sparse triangular solve, sunway architecture, sparse level tile}
+}
+
+@inproceedings{10.1145/3178487.3178514,
+author = {Wilcox, James R. and Flanagan, Cormac and Freund, Stephen N.},
+title = {V<span class="smallcaps SmallerCapital">erified</span>FT: A Verified, High-Performance Precise Dynamic Race Detector},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178514},
+doi = {10.1145/3178487.3178514},
+abstract = {Dynamic data race detectors are valuable tools for testing and validating concurrent software, but to achieve good performance they are typically implemented using sophisticated concurrent algorithms. Thus, they are ironically prone to the exact same kind of concurrency bugs they are designed to detect. To address these problems, we have developed VerifiedFT, a clean slate redesign of the FastTrack race detector [19]. The VerifiedFT analysis provides the same precision guarantee as FastTrack, but is simpler to implement correctly and efficiently, enabling us to mechanically verify an implementation of its core algorithm using CIVL [27]. Moreover, VerifiedFT provides these correctness guarantees without sacrificing any performance over current state-of-the-art (but complex and unverified) FastTrack implementations for Java.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {354–367},
+numpages = {14},
+keywords = {data races, dynamic analysis, concurrency},
+location = {Vienna, Austria},
+series = {PPoPP '18}
+}
+
+@article{10.1145/3200691.3178514,
+author = {Wilcox, James R. and Flanagan, Cormac and Freund, Stephen N.},
+title = {V<span class="smallcaps SmallerCapital">erified</span>FT: A Verified, High-Performance Precise Dynamic Race Detector},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178514},
+doi = {10.1145/3200691.3178514},
+abstract = {Dynamic data race detectors are valuable tools for testing and validating concurrent software, but to achieve good performance they are typically implemented using sophisticated concurrent algorithms. Thus, they are ironically prone to the exact same kind of concurrency bugs they are designed to detect. To address these problems, we have developed VerifiedFT, a clean slate redesign of the FastTrack race detector [19]. The VerifiedFT analysis provides the same precision guarantee as FastTrack, but is simpler to implement correctly and efficiently, enabling us to mechanically verify an implementation of its core algorithm using CIVL [27]. Moreover, VerifiedFT provides these correctness guarantees without sacrificing any performance over current state-of-the-art (but complex and unverified) FastTrack implementations for Java.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {354–367},
+numpages = {14},
+keywords = {concurrency, data races, dynamic analysis}
+}
+
+@inproceedings{10.1145/3178487.3178515,
+author = {Xu, Yifan and Lee, I-Ting Angelina and Agrawal, Kunal},
+title = {Efficient Parallel Determinacy Race Detection for Two-Dimensional Dags},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178515},
+doi = {10.1145/3178487.3178515},
+abstract = {A program is said to have a determinacy race if logically parallel parts of a program access the same memory location and one of the accesses is a write. These races are generally bugs in the program since they lead to non-deterministic program behavior --- different schedules of the program can lead to different results. Most prior work on detecting these races focuses on a subclass of programs with fork-join parallelism.This paper presents a race-detection algorithm, 2D-Order, for detecting races in a more general class of programs, namely programs whose dependence structure can be represented as planar dags embedded in 2D grids. Such dependence structures arise from programs that use pipelined parallelism or dynamic programming recurrences. Given a computation with T1 work and T∞ span, 2D-Order executes it while also detecting races in O(T1/P + T∞) time on P processors, which is asymptotically optimal.We also implemented PRacer, a race-detection algorithm based on 2D-Order for Cilk-P, which is a language for expressing pipeline parallelism. Empirical results demonstrate that PRacer incurs reasonable overhead and exhibits scalability similar to the baseline (executions without race detection) when running on multiple cores.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {368–380},
+numpages = {13},
+location = {Vienna, Austria},
+series = {PPoPP '18}
+}
+
+@article{10.1145/3200691.3178515,
+author = {Xu, Yifan and Lee, I-Ting Angelina and Agrawal, Kunal},
+title = {Efficient Parallel Determinacy Race Detection for Two-Dimensional Dags},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178515},
+doi = {10.1145/3200691.3178515},
+abstract = {A program is said to have a determinacy race if logically parallel parts of a program access the same memory location and one of the accesses is a write. These races are generally bugs in the program since they lead to non-deterministic program behavior --- different schedules of the program can lead to different results. Most prior work on detecting these races focuses on a subclass of programs with fork-join parallelism.This paper presents a race-detection algorithm, 2D-Order, for detecting races in a more general class of programs, namely programs whose dependence structure can be represented as planar dags embedded in 2D grids. Such dependence structures arise from programs that use pipelined parallelism or dynamic programming recurrences. Given a computation with T1 work and T∞ span, 2D-Order executes it while also detecting races in O(T1/P + T∞) time on P processors, which is asymptotically optimal.We also implemented PRacer, a race-detection algorithm based on 2D-Order for Cilk-P, which is a language for expressing pipeline parallelism. Empirical results demonstrate that PRacer incurs reasonable overhead and exhibits scalability similar to the baseline (executions without race detection) when running on multiple cores.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {368–380},
+numpages = {13}
+}
+
+@inproceedings{10.1145/3178487.3178516,
+author = {Acar, Umut A. and Aksenov, Vitaly and Chargu\'{e}raud, Arthur and Rainey, Mike},
+title = {Performance Challenges in Modular Parallel Programs},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178516},
+doi = {10.1145/3178487.3178516},
+abstract = {Over the past decade, many programming languages and systems for parallel-computing have been developed, including Cilk, Fork/Join Java, Habanero Java, Parallel Haskell, Parallel ML, and X10. Although these systems raise the level of abstraction at which parallel code are written, performance continues to require the programmer to perform extensive optimizations and tuning, often by taking various architectural details into account. One such key optimization is granularity control, which requires the programmer to determine when and how parallel tasks should be sequentialized.In this paper, we briefly describe some of the challenges associated with automatic granularity control when trying to achieve portable performance for parallel programs with arbitrary nesting of parallel constructs. We consider a result from the functional-programming community, whose starting point is to consider an "oracle" that can predict the work of parallel codes, and thereby control granularity. We discuss the challenges in implementing such an oracle and proving that it has the desired theoretical properties under the nested-parallel programming model.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {381–382},
+numpages = {2},
+location = {Vienna, Austria},
+series = {PPoPP '18}
+}
+
+@article{10.1145/3200691.3178516,
+author = {Acar, Umut A. and Aksenov, Vitaly and Chargu\'{e}raud, Arthur and Rainey, Mike},
+title = {Performance Challenges in Modular Parallel Programs},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178516},
+doi = {10.1145/3200691.3178516},
+abstract = {Over the past decade, many programming languages and systems for parallel-computing have been developed, including Cilk, Fork/Join Java, Habanero Java, Parallel Haskell, Parallel ML, and X10. Although these systems raise the level of abstraction at which parallel code are written, performance continues to require the programmer to perform extensive optimizations and tuning, often by taking various architectural details into account. One such key optimization is granularity control, which requires the programmer to determine when and how parallel tasks should be sequentialized.In this paper, we briefly describe some of the challenges associated with automatic granularity control when trying to achieve portable performance for parallel programs with arbitrary nesting of parallel constructs. We consider a result from the functional-programming community, whose starting point is to consider an "oracle" that can predict the work of parallel codes, and thereby control granularity. We discuss the challenges in implementing such an oracle and proving that it has the desired theoretical properties under the nested-parallel programming model.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {381–382},
+numpages = {2}
+}
+
+@inproceedings{10.1145/3178487.3178517,
+author = {Arif, Mahwish and Vandierendonck, Hans},
+title = {Reducing the Burden of Parallel Loop Schedulers for Many-Core Processors},
+year = {2018},
+isbn = {9781450349826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3178487.3178517},
+doi = {10.1145/3178487.3178517},
+abstract = {This work proposes a low-overhead half-barrier pattern to schedule fine-grain parallel loops and considers its integration in the Intel OpenMP and Cilkplus schedulers. Experimental evaluation demonstrates that the scheduling overhead of our techniques is 43% lower than Intel OpenMP and 12.1x lower than Cilk. We observe 22% speedup on 48 threads, with a peak of 2.8x speedup.},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {383–384},
+numpages = {2},
+location = {Vienna, Austria},
+series = {PPoPP '18}
+}
+
+@article{10.1145/3200691.3178517,
+author = {Arif, Mahwish and Vandierendonck, Hans},
+title = {Reducing the Burden of Parallel Loop Schedulers for Many-Core Processors},
+year = {2018},
+issue_date = {January 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/3200691.3178517},
+doi = {10.1145/3200691.3178517},
+abstract = {This work proposes a low-overhead half-barrier pattern to schedule fine-grain parallel loops and considers its integration in the Intel OpenMP and Cilkplus schedulers. Experimental evaluation demonstrates that the scheduling overhead of our techniques is 43% lower than Intel OpenMP and 12.1x lower than Cilk. We observe 22% speedup on 48 threads, with a peak of 2.8x speedup.},
+journal = {SIGPLAN Not.},
+month = {feb},
+pages = {383–384},
+numpages = {2}
 }
 

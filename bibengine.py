@@ -2,7 +2,7 @@ import json
 import requests
 
 
-KEYWORDS = ["Machine Learning", "Neural Network", "CNN", "RNN", "LSTM"]
+KEYWORDS = ["Machine Learning", "Neural Network", "CNN", "RNN", "LSTM", "Deep Learning"]
 
 class QueryEntry(object):
 	"""docstring for QueryEntry"""
@@ -73,10 +73,22 @@ class BibTexEngine(object):
 			bibObj = BibTexObject(bibtex['title'], bibtex['authors'], [], '')
 		return bibObj
 
-	def findKeyword(self, bibObj):
-		for kw in KEYWORDS:
-			if kw in bibObj.keywords:
+	def toBibObj(self, bibentry):
+		if 'keywords' in bibentry and 'abstract' in bibentry:
+			bibObj = BibTexObject(bibentry['title'], bibentry['author'], bibentry['keywords'], bibentry['abstract'])
+		elif 'keywords' in bibentry:
+			bibObj = BibTexObject(bibentry['title'], bibentry['author'], bibentry['keywords'], '')
+		elif 'abstract' in bibentry:
+			bibObj = BibTexObject(bibentry['title'], bibentry['author'], [], bibentry['abstract'])
+		else:
+			bibObj = BibTexObject(bibentry['title'], bibentry['author'], [], '')
+		return bibObj
+
+
+	def findKeyword(self, bibObj, keywords=KEYWORDS):
+		for kw in keywords:
+			if kw.lower() in bibObj.keywords:
 				return True
-			elif kw in bibObj.abstract:
+			elif kw.lower() in bibObj.abstract:
 				return True
 		return False
